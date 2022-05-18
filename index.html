@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>americanGirl</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
+      rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&family=Dosis:wght@300&family=Montserrat:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,400&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:wght@800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+    <nav class="navy">
+        <div class="left-nav">
+            <div class="icony">
+                <span class="material-icons-outlined">
+                    <a href="close.html">close</a>
+                </span>
+            </div>
+            <div class="text">
+                Close
+            </div>
+        </div>
+        <div class="right-navy">
+            <button>start over</button>
+            <button>save</button>
+            <button>add to bag</button>
+        </div>
+    </nav>
+
+    <div class="doll">
+        <img class="basic-face" src="https://images.mattel.com/ag-design-studio/prod/dolls/static/face/face-sonali-05-long-straight-default.png">
+        <img class="basic-body" src="Create Your Own _ American Girl_files/body-05.png">
+        <img class="basic-hair" src="https://res.cloudinary.com/mattel-dtc-cloud/image/upload/images-mattel/ag-design-studio/prod/dolls/static/hair/hair-pixie-default-red-default-lets-play.png">
+        <img class="left-eye" src="Create Your Own _ American Girl_files/eyes-left-green-classic-05.png">
+        <img class="right-eye" src="Create Your Own _ American Girl_files/eyes-right-green-classic-05.png">
+        <img class="create default" src="https://res.cloudinary.com/mattel-dtc-cloud/image/upload/images-mattel/ag-design-studio/prod/dolls/static/outfit/outfit-lets-create%252B2019-classic-pixie-default.png">
+        <!--<img class="basic-outfit" src="Create Your Own _ American Girl_files/outfit-lets-create+2019-classic-bob-default.png">-->
+    </div>
+
+    <div class="circles">
+        <div class="circle1">
+            <button>
+                <svg class="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="eCQETZ2bWzY1" viewBox="0 0 512 512" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"><image width="512" height="512" xlink:href="data:image/png;base64,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
+                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
+                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" preserveAspectRatio="xMidYMid meet"/>
+                </svg>
+            </button>
+            <span>Outfits & Extras</span>
+        </div>
+        
+
+        <div class="circle2">
+            <div class="circle2-img">
+                <button type="button" id="my-btn2" onclick="myFunction()">
+                    <svg class="svg2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 16.572 16.572" style="enable-background:new 0 0 16.572 16.572;" xml:space="preserve">
+                        <g>
+                            <g>
+                                <path style="fill:#030104;" d="M15.311,1.962c-0.866-0.867-1.206,2.439-3.454,4.688c-1.772,1.773-3.868,1.482-4.974,2.697    c-1.105,1.213-2.233,1.139-3.449,2.355c-1.914,1.913-2.927,4.002-2.262,4.667c0.664,0.664,2.753-0.349,4.667-2.263    c1.341-1.341,1.36-2.656,2.426-3.73c1.066-1.072,2.935-1.161,4.546-2.773C15.059,5.354,16.179,2.829,15.311,1.962z"/>
+                                <path style="fill:#030104;" d="M7.779,8.161c0.178,0.178,0.466,0.178,0.643,0c0.177-0.177,0.177-0.464,0-0.643l-1.22-1.22    c-0.178-0.177-0.466-0.177-0.643,0c-0.177,0.178-0.177,0.465,0,0.643L7.779,8.161z"/>
+                                <path style="fill:#030104;" d="M8.233,5.663c-0.178,0.177-0.178,0.465,0,0.642l1.221,1.221c0.177,0.177,0.464,0.177,0.643,0    c0.177-0.177,0.177-0.465,0-0.642L8.875,5.663C8.698,5.486,8.41,5.486,8.233,5.663z"/>
+                                <path style="fill:#030104;" d="M11.463,6.46c0.176-0.177,0.178-0.465,0-0.643l-1.221-1.22c-0.178-0.178-0.465-0.177-0.643,0    c-0.177,0.178-0.177,0.465,0,0.643l1.22,1.22C10.998,6.637,11.286,6.637,11.463,6.46z"/>
+                                <path style="fill:#030104;" d="M12.727,5.114c0.178-0.178,0.178-0.466,0-0.643l-1.22-1.22c-0.178-0.178-0.466-0.177-0.643,0    c-0.178,0.177-0.178,0.465,0,0.642l1.221,1.221C12.262,5.291,12.55,5.291,12.727,5.114z"/>
+                                <path style="fill:#030104;" d="M11.657,1.72c-0.178,0.177-0.178,0.465,0,0.643l1.221,1.221c0.177,0.177,0.464,0.176,0.642,0    c0.178-0.178,0.178-0.465,0-0.643l-1.221-1.22C12.121,1.543,11.835,1.543,11.657,1.72z"/>
+                                <path style="fill:#030104;" d="M13.859,1.996c0.177,0.177,0.465,0.177,0.643,0c0.177-0.178,0.177-0.465,0-0.643l-1.221-1.22    c-0.178-0.177-0.466-0.177-0.642,0c-0.178,0.177-0.178,0.465,0,0.643L13.859,1.996z"/>
+                                <path style="fill:#030104;" d="M7.029,5.84c0.178,0.178,0.465,0.178,0.643,0c0.177-0.177,0.177-0.465,0-0.643L7.216,4.742    c-0.177-0.177-0.465-0.177-0.642,0c-0.178,0.177-0.178,0.465,0,0.643L7.029,5.84z"/>
+                                <path style="fill:#030104;" d="M8.15,4.828c0.177,0.178,0.465,0.178,0.643,0c0.177-0.177,0.177-0.465,0-0.642L8.01,3.403    c-0.178-0.178-0.466-0.177-0.643,0c-0.178,0.177-0.178,0.465,0,0.642L8.15,4.828z"/>
+                                <path style="fill:#030104;" d="M9.323,3.624c0.178,0.177,0.464,0.176,0.643,0c0.177-0.178,0.178-0.465,0-0.643L9.073,2.089    c-0.178-0.178-0.465-0.177-0.643,0s-0.178,0.465,0,0.642L9.323,3.624z"/>
+                                <path style="fill:#030104;" d="M10.249,2.213c0.177,0.177,0.465,0.177,0.644,0c0.176-0.177,0.176-0.465,0-0.643l-0.456-0.455    c-0.178-0.178-0.466-0.177-0.643,0c-0.178,0.177-0.178,0.465,0,0.642L10.249,2.213z"/>
+                                <path style="fill:#030104;" d="M11.421,1.198c0.178,0.177,0.465,0.177,0.643,0c0.178-0.178,0.178-0.465,0-0.643l-0.346-0.346    c-0.178-0.177-0.465-0.177-0.643,0s-0.178,0.465,0,0.642L11.421,1.198z"/>
+                            </g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                    </svg>
+                </button>
+            </div>
+            <span>Hair</span>
+
+            <div class="nested-circles">
+                <div class="hair-style" style="cursor:pointer">
+                    <span class="material-icons-outlined">
+                        add
+                    </span>
+                </div>
+                
+                <div class="hair-cut" style="cursor:pointer">
+                        <img src="haircut/thumbnail-wig-long-wavy-black.jpg">
+                </div>
+
+
+                <div class="hair-color" style="cursor:pointer">
+                    <img src="haircut/thumbnail-hair_color-black.jpg">
+                </div>
+            </div>
+        </div>
+        
+        
+
+        <div class="circle3">
+            <div class="circle3-img">
+                <button>
+                    <svg class="svg3" version="1.1" id="Layer_1___1256352633" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 76.9 80.9" enable-background="new 0 0 76.9 80.9" xml:space="preserve">
+                        <path d="M42,32.3c0-0.1,0.1-0.3,0.1-0.4c0-0.2-0.1-0.3-0.1-0.5c0,0,0-0.1,0-0.1c0-0.4,0.2-0.7,0.6-0.8
+                            c0.1,0,0.1,0,0.2,0c0.3,0,0.4,0.1,0.5,0.5c0.1,0.5,0.2,1.1,0.3,1.6c0,0,0,0,0,0.1c0,0.2-0.1,0.4-0.2,0.6c-0.6,0.8-1.3,1.6-1.8,2.5
+                            c-0.4,0.6-1.6,1.4-2.1,1.6c0,0-0.2,0-0.2-0.1c0-0.2,0-0.6,0.1-0.8c0.1-0.3,0.2-0.4,0.2-0.4c0.2-0.3,0.6-0.7,0.9-0.9
+                            c0.5-0.3,0.7-0.7,0.9-1.2C41.5,33.4,41.8,32.8,42,32.3z M32.3,21c0.1,0,0.3,0,0.4,0c0.6-0.3,1.2-0.4,1.9-0.3
+                            c0.5,0.1,1.1,0.1,1.6,0.1c0.4,0,0.7,0,1.1,0c1.5,0.1,2.1,0.6,2.6,2.1c0.1,0.2,0.2,0.4,0.3,0.6c0.4,0.7,0.8,1.4,1.2,2.1
+                            c0.3,0.5,0.5,1.1,0.7,1.7c0.1,0.2,0.1,0.5,0.2,0.7c0,0.1,0.1,0.1,0.1,0.2c-0.2,0.4-0.3,0.9-0.3,1.1c0,0,0,0,0,0
+                            c0,0.2,0.4,0.6,0.6,0.6c0.3,0,0.7-0.4,0.7-0.6c0-0.3-0.1-1-0.2-1.5c0-0.1,0-0.2,0-0.2c0,0,0,0,0,0c0-1.1-0.2-2.2-0.8-3.2
+                            c-0.2-0.3-0.3-0.5-0.4-0.8c-0.2-0.4-0.4-0.8-0.8-1c-0.1-0.1-0.2-0.2-0.2-0.3c0,0,0-0.1,0-0.1c0-0.1,0-0.2,0-0.2c0-0.4-0.2-0.8-0.5-1
+                            c-0.6-0.4-1.3-0.8-2.1-0.9c-0.2,0-0.5-0.1-0.7-0.2c-0.5-0.2-0.9-0.3-1.4-0.3c-0.2,0-0.4,0-0.7,0.1c-0.9,0.2-1.8,0.3-2.8,0.2
+                            c-0.6-0.1-1.3-0.1-1.9,0c-0.8,0.1-1.5,0.4-2.3,0.7c0,0.3,0,0.7-0.1,1.2c0.4-0.1,0.7-0.1,1.1-0.2C30.5,21.1,31.4,20.8,32.3,21z
+                                M33.1,13.2c0.6-0.2,1.1-0.6,1.7-0.7c1.3-0.4,2.5-0.7,3.8-1c-0.3-0.4-0.7-0.8-1-1.3c-0.3,0.2-0.5,0.3-0.7,0.4
+                            c-0.3,0.1-0.6,0.1-0.8,0.2c-0.5,0.1-1,0.2-1.4,0.4c-1,0.4-2,0.8-3,1.2c-0.8,0.3-1.6,0.6-2.4,0.8c-0.1,0-0.3,0.1-0.3,0.2
+                            c-0.1,0.3,0,0.7-0.1,1c1.1-0.3,2.1-0.6,3.1-0.9C32.4,13.4,32.8,13.4,33.1,13.2z M30.7,16.3c0.4,0,0.8,0,1.1-0.2
+                            c0.7-0.4,1.4-0.3,2.1-0.2c0.7,0.1,1.4,0.4,2.1,0c0.4,0.6,0.6,0.7,1.3,0.6c0.6-0.1,1.2-0.1,1.8,0.2c0.3,0.1,0.7,0.2,1,0.1
+                            c0.7-0.1,1.2,0.1,1.7,0.4c0.2,0.2,0.4,0.3,0.7,0.4c0.6,0.1,0.9,0.3,1.1,0.8c0.2,0.5,0.6,0.8,1.2,1.1c-0.8-1-1.6-2-2.3-2.9
+                            c-0.4-0.6-1-1-1.7-1.3c-0.4-0.1-0.8-0.2-1.2-0.2c-0.4,0-0.8,0-1.2,0c-0.4,0-0.7-0.1-1-0.1c-0.4-0.1-0.8-0.2-1.3-0.1
+                            c-0.9,0.1-1.8,0-2.7,0c0,0-0.1,0-0.1,0c-1.5,0-2.9,0.3-4.2,0.7c-0.1,0-0.2,0.2-0.2,0.2c0,0.4-0.1,0.8-0.1,1.2
+                            c0.4-0.1,0.6-0.2,0.9-0.4C30,16.3,30.4,16.3,30.7,16.3z M28.7,19.2c0.4,0,0.7-0.1,0.9-0.4c0.3-0.3,0.7-0.4,1.2-0.3
+                            c0.6,0.2,1.1,0.1,1.7-0.2c0.1-0.1,0.3-0.1,0.5-0.1c0.9,0,1.8,0.1,2.7,0.1c0.8,0,1.6,0,2.3,0.2c0.9,0.2,1.7,0.7,2.5,1
+                            c0.9,0.3,1.2,0.9,1.3,1.7c0,0.1,0,0.1,0,0.2c0,0.3,0.1,0.6,0.5,0.6c0.1,0,0.2,0.1,0.2,0.2c0.2,0.4,0.4,0.9,0.5,1.4
+                            c0.2,0.8,0.6,1.5,0.9,2.3c0.1,0.2,0.1,0.4,0.1,0.6c0,0.1,0,0.2,0,0.4c-0.1,0.3-0.1,0.5-0.1,0.8c0,0.3,0,0.5,0.1,0.8
+                            c0.1,0.2,0.1,0.3,0.1,0.4c0,0.2-0.1,0.4-0.2,0.6c-0.1,0.2-0.2,0.4-0.2,0.6c0,0.3,0.1,0.6,0.2,0.8c0.2,0.3,0.5,0.3,0.7,0
+                            c0.1-0.2,0.2-0.5,0.2-0.7c0-0.2,0-0.4-0.1-0.6c0-0.1-0.1-0.1-0.1-0.2c0-0.1,0-0.2,0.1-0.3c0.5-0.6,0.5-1.5,0.7-2.2c0,0,0,0,0,0
+                            c0-0.1,0-0.1,0-0.2c-0.1-0.4-0.1-0.8-0.2-1.2c0-0.6-0.1-1.2-0.5-1.6c-0.2-0.3-0.3-0.5-0.3-0.8c0-0.1,0-0.2,0-0.3c0-0.1,0-0.2,0-0.2
+                            c0-0.3,0-0.5-0.1-0.7c-0.6-1-1.2-1.9-1.8-2.9c-0.3-0.5-0.8-0.7-1.3-0.8c-0.3,0-0.7-0.1-1-0.2c-0.7-0.2-1.5-0.3-2.2-0.5
+                            c-0.9-0.2-1.9-0.1-2.8-0.4c-0.8-0.2-1.7-0.1-2.6-0.2c-0.2,0-0.3,0-0.5,0c-0.3,0-0.6,0.1-0.9,0.3c0,0-0.1,0-0.2,0c0,0-0.1,0-0.1,0
+                            c-0.7,0.1-1.5,0.2-2.2,0.3c-0.2,0-0.4,0.1-0.4,0.3c0,0,0,0,0,0c0,0.2,0,0.3,0,0.5C28.7,18.7,28.7,19,28.7,19.2z M29.8,12
+                            c0.5-0.1,1-0.2,1.4-0.3c0.5-0.2,1-0.4,1.5-0.6c1.4-0.6,2.8-1.2,4.2-1.8c-0.2-0.2-0.4-0.5-0.6-0.8c-0.1-0.1-0.2-0.1-0.3-0.1
+                            c0,0-0.1,0-0.1,0c-1.4,0.5-2.8,1.1-4.2,1.6c-0.6,0.2-1.2,0.5-1.8,0.7c-0.9,0.3-1,0.3-1,0.8c0,0.2,0,0.4,0,0.7
+                            C29.3,12.1,29.6,12,29.8,12z M0,40.3c0,0,0,0.1,0,0.1c0.4,0.2,0.8,0.3,1.2,0.5c-0.1-0.4-0.1-0.7-0.2-1C0.7,40,0.4,40.2,0,40.3z
+                                M5.9,39.5c0-0.4,0.1-0.7,0.3-1.1c0-0.1,0-0.2,0-0.4c-0.4,0.1-0.7,0.3-1,0.4c-0.2,0-0.2,0.1-0.2,0.3c0,0,0,0.1,0,0.1
+                            c0.1,0.5,0.1,1.1,0.1,1.6c0,0.3,0.1,0.6,0.4,0.7c-0.2,0.3-0.3,0.6-0.3,0.9c0,0.5,0.5,0.8,1.4,1c-0.1-0.5-0.3-0.9-0.4-1.4
+                            C6.1,40.8,5.9,40.2,5.9,39.5z M3.7,39c-0.3,0.1-0.6,0.2-1,0.4c-0.1,0-0.2,0.2-0.2,0.3c0,0,0,0,0,0.1c0,0.3,0,0.7,0.1,1
+                            c0,0.7,0,0.7,0.7,0.9c0.2,0.1,0.4,0.2,0.7,0.3c0-0.3-0.1-0.6-0.1-0.9c0-0.2,0-0.4,0.1-0.6c0,0,0,0,0-0.1c0-0.1,0-0.1,0-0.2
+                            C3.9,39.9,3.8,39.4,3.7,39z M29.2,26.4c0.3-0.1,0.5-0.2,0.8-0.4c0.9,0.7,0.9,0.7,1.6,0.2c0.3,0.2,0.5,0.4,0.8,0.5
+                            c1.1,0.5,2.3,0.6,3.1,1.6c0.1,0.1,0.4,0.1,0.5,0.1c0.2-0.1,0.3-0.3,0.3-0.5c0-0.1,0-0.1,0-0.2c-0.2-0.5-0.5-1-1.1-1.1
+                            c-0.4-0.2-0.9-0.3-1.3-0.4c-0.4-0.1-0.7-0.2-1.1-0.2c-0.3,0-0.6-0.1-0.8-0.3c-0.3-0.2-0.6-0.5-0.8-0.4c-0.4,0.1-0.8,0-1.2-0.1
+                            c-0.3-0.1-0.6-0.1-0.9-0.1c-0.1,0-0.1,0-0.2,0c0,0-0.1,0-0.1,0c-0.1,0-0.2,0-0.2,0c-0.1,0.1-0.2,0.2-0.3,0.3c0,0.4,0,0.7-0.1,1.1
+                            C28.6,26.4,29,26.4,29.2,26.4z M29.3,23.8c0.1,0,0.2-0.1,0.3,0c0.5,0.3,1.1,0.2,1.6,0c1.5-0.7,3.1-0.8,4.7-0.6
+                            c1.2,0.1,2.3,0.6,3,1.7c0,0,0,0.1,0,0.1c-0.1,0.1-0.2,0.1-0.3,0.2c0,0.1,0.1,0.1,0.1,0.2c0.6,1.2,0.9,2.5,1.2,3.8c0,0.1,0,0.1,0,0.2
+                            c0,0,0,0.1,0,0.1c0,0.4-0.1,0.7-0.1,1.1c0,0.5-0.3,1-0.3,1.5c0,0.1,0,0.3,0.1,0.4c-0.3,0.7-0.7,1.4-1,2c-0.2,0.4-0.6,0.7-0.8,1
+                            c-0.2,0.2-0.3,0.4-0.7,0.4c-0.1,0-0.2,0.1-0.3,0.2c-0.9,1.1-2,1.6-3.4,1.7c-0.9,0.1-1.9,0-2.8,0.1c-0.1,0-0.2,0-0.2,0
+                            c-0.2,0.2-0.4,0.1-0.6,0c-0.2-0.1-0.5-0.2-0.7-0.2c-0.3,0-0.7,0-1.1,0c-0.2,0-0.4,0.2-0.4,0.4c0,0.1,0,0.1,0,0.2
+                            c0.1,0.4,0.7,0.9,1.3,0.9c0.8,0,1.5,0.1,2.3,0.1c0.6,0,1.2,0.1,1.7-0.1c1-0.2,2.1-0.6,3.1-0.9c0.7-0.2,1.4-0.6,2-1.1
+                            c-0.1-0.3,1.8-2.3,2-2.9c0.1-0.3,0.3-0.5,0.4-0.7c0.2-0.4,0.4-0.8,0.5-1.2c0.2-0.4,0.3-0.9,0.4-1.4c0-0.1,0.1-0.2,0.1-0.3
+                            c0,0,0-0.1,0-0.1c-0.2-0.3-0.2-0.6-0.2-0.9c0-0.2,0-0.4,0-0.7c0-0.1,0-0.2,0-0.2c0-0.4-0.1-0.7-0.4-1c0.1-0.3,0.3-0.5,0.3-0.8
+                            c0-0.2-0.1-0.3-0.3-0.5c-0.3-0.2-0.4-0.6-0.4-0.9c0-0.1-0.1-0.3-0.1-0.4c-0.4-0.4-0.7-0.9-0.8-1.4c-0.1-0.4-0.3-0.7-0.7-0.9
+                            c-0.4-0.2-0.8-0.5-1.2-0.7c-0.2-0.1-0.4-0.2-0.6-0.3c-0.7,0-1.4,0-2.1,0c-0.2,0-0.4,0-0.6,0c-0.3,0-0.6,0.2-0.9,0.1
+                            c-0.5-0.1-0.9,0-1.3,0.2c-0.2,0.1-0.5,0.2-0.7,0.2c-0.9-0.2-1.7,0-2.6,0.3c-0.1,0-0.2,0.1-0.2,0.2c0,0.2,0,0.4,0,0.6
+                            c0,0.2,0,0.4,0,0.6C28.7,23.9,29,23.9,29.3,23.8z M68.3,20.8c0,0.1,0.1,0.2,0.1,0.3c0.1,0.8,0.1,1.6,0.1,2.5c0,0.4,0,0.7,0,1.1
+                            c0,0.4,0,0.8,0,1.3c0,0.3,0,0.7,0,1c0,0.5,0.1,0.9,0.3,1.4c0.3-0.5,0.7-1,0.7-1.5c0-0.1,0-0.3-0.1-0.4c0-0.1,0-0.2,0-0.3
+                            c0-0.1,0-0.3,0-0.4c0-0.3,0.1-0.5,0.1-0.8c0,0,0,0,0-0.1c-0.1-0.9-0.2-1.8-0.3-2.8c-0.1-0.5-0.2-1-0.2-1.5c0-0.1,0-0.2,0-0.4
+                            c0-0.1,0-0.2,0-0.3c0.1-0.4,0.2-0.6,0.2-0.8c0-0.2-0.2-0.4-0.6-0.8c0-0.1,0.1-0.2,0.2-0.4c-0.3,0.1-0.6,0.2-0.8,0.2
+                            c0,0.6,0,1.2,0.1,1.7C68.2,20.2,68.2,20.5,68.3,20.8z M59.3,22.2C59.3,22.2,59.3,22.2,59.3,22.2c0,0.4-0.1,0.7-0.1,1.1
+                            c0,0.3,0,0.6,0.2,0.9c0,0,0,0.1,0,0.1c0,0,0,0.1,0,0.1c0,0.8,0,1.6,0,2.4c0,0.8,0,1.6-0.1,2.3c0,0.2-0.1,0.5-0.2,0.7
+                            c-0.5,0.5-0.7,1.2-1,1.8c-0.2,0.6-0.5,1.2-0.9,1.7c-0.3,0.4-0.6,0.8-0.6,1.3c0,0.1,0,0.2,0,0.3c0,0,0,0,0,0c0,0.1-0.1,0.2-0.2,0.3
+                            c-0.3,0.4-0.4,0.8-0.6,1.2c-0.3,0.6-0.8,1.2-1,1.9c-0.5,1.3-0.9,2.6-1.8,3.7c-0.7,0.8-1.5,1.6-2.2,2.4C50.4,44.8,50,45,50,45.6
+                            c0,0,0,0.1,0,0.1c-0.3,0-0.5,0-0.7,0c-0.3,0-0.5,0.1-0.5,0.4c0,0,0,0,0,0.1c0,0.3,0,0.5,0.1,0.8c-0.5,0.1-0.9,0.1-1.4,0.2
+                            c-0.6,0.1-0.8,0.3-1,0.8c-0.1,0.2-0.1,0.4-0.2,0.6c-0.2,0-0.4,0-0.6-0.1c-0.5-0.1-0.9,0-1.3,0.2c-0.6,0.4-1.3,0.8-2,1.2
+                            c-0.2-0.7-0.6-0.6-1.1-0.5c-0.3,0.1-0.6,0.1-0.8,0.1c-0.4,0-0.8,0-1.2,0c-0.7,0.1-1.4,0.2-2,0.2c-1.1,0.1-2.3,0.1-3.4,0.1
+                            c-0.3,0-0.4,0.1-0.5,0.4c0,0,0,0.1,0,0.1c0,0.2,0.1,0.3,0.3,0.3c1.1,0.5,2.2,0.5,3.4,0.4c0.2,0,0.5,0,0.7,0c0.1,0,0.2,0,0.3,0
+                            c0,0,0.1,0,0.1,0c0.1,0,0.2,0,0.2,0c1.2-0.2,2.3-0.5,3.5-0.7c0.7-0.1,1.3-0.2,1.9-0.4c0,0.1,0,0.1,0,0.2c0,0.1-0.1,0.2-0.3,0.2
+                            c-1.3,0.4-2.5,0.8-3.8,1.2c-0.2,0.1-0.5,0.1-0.8,0.1c-1.2,0-2.3,0-3.5,0c-0.5,0-1.1-0.2-1.6-0.2c-0.4-0.1-0.8-0.1-1.3-0.1
+                            c-0.1,0-0.3,0.1-0.3,0.1c0,0,0,0,0,0.1c0,0.1,0,0.2,0.1,0.3c0.7,0.5,1.3,1.1,2.2,1.1c0.8,0.1,1.7,0,2.5,0c0,0,0.1,0,0.1,0
+                            c0.7,0,1.4,0,2.1,0c0.3,0,0.5,0,0.8-0.1c0.8-0.2,1.7-0.5,2.5-0.8c0.4-0.1,0.9-0.2,1.3-0.5c0.4-0.2,0.9-0.3,1.4-0.4
+                            c0.2,0,0.5-0.1,0.7-0.3c0.5-0.4,1-0.9,1.4-1.4c0.2-0.3,0.5-0.4,0.9-0.4c0.3,0.1,0.5,0,0.6-0.3c0.2-0.6,0.6-0.9,1.1-1
+                            c0.2,0,0.4-0.2,0.4-0.4c0,0,0-0.1,0-0.1c0-0.1,0-0.1,0-0.2c0-0.3,0.2-0.4,0.4-0.6c0.2-0.1,0.3-0.2,0.4-0.4c0.6-0.7,1.2-1.2,1.9-1.7
+                            c0.2-0.1,0.3-0.3,0.4-0.5c0.1-0.5,0.3-0.8,0.6-1.2c0.3-0.3,0.6-0.6,0.8-1c0.1-0.1,0.2-0.2,0.2-0.4c0-0.7,0.3-1.4,0.6-1.9
+                            c0.5-0.8,0.3-1.2,0.8-2c0.3-0.4,0.8-1,0.9-1.3c0.3-0.6,0-0.4,0.3-1c0.2-0.6,0.3-0.9,0.5-1.6c0-0.2,0.1-0.4,0.1-0.5
+                            c0-0.3,0.6-0.4,0.4-0.7c-0.1-0.1,0.5-0.3,0.5-0.4c0-0.1,0-0.1,0-0.2c0.6-1.5,0.8-3.1,0.8-4.7c0-0.6,0-1.2-0.1-1.9c0-0.4,0-0.8,0-1.2
+                            c0-0.2,0-0.4,0-0.6c0-0.1,0-0.1,0-0.2c0-0.5,0-1-0.2-1.4c-0.2-0.4-0.2-0.8-0.3-1.2c0-0.1-0.1-0.3-0.1-0.5c-0.3,0.1-0.5,0.1-0.7,0.2
+                            c0.1,0.2,0.1,0.3,0.2,0.4C59.1,21.5,59.3,21.8,59.3,22.2z M70,20.7c0,0.4,0,0.9,0.1,1.3c0.1,1.2,0.3,2.4,0.4,3.6c0,0,0,0,0.1,0.1
+                            c0.2-0.3,0.4-0.6,0.6-0.9c0.1-0.2,0.2-0.4,0.2-0.5c0,0,0,0,0-0.1c-0.1-0.9-0.3-1.8-0.4-2.8c0-0.2,0-0.3,0-0.5c0-0.2,0-0.3,0-0.5
+                            c0-0.1,0-0.1,0-0.2c0-0.3-0.4-0.9-0.8-1c-0.3,0.3-0.1,1-0.1,1.4C70,20.6,70,20.7,70,20.7z M66.1,22.4c0,0.1,0.1,0.2,0.1,0.3
+                            c0,0,0,0,0,0c0,0.3,0,0.6,0,0.9c0,0.2,0,0.3,0,0.4c0.1,0.5,0.1,1,0.1,1.5c0,0.4,0,0.7-0.1,1.1c0,0.2-0.1,0.5-0.1,0.7
+                            c0,0.3,0,0.7,0.1,1c0.1,0.3,0.1,0.5,0.1,0.8c0,0.2,0,0.5-0.2,0.7c0,0.1-0.1,0.3-0.1,0.4c0,0,0,0.1,0,0.1c0.1,0.1,0.2,0.3,0.1,0.4
+                            c0,0.2-0.1,0.4-0.1,0.6c-0.1,0.3-0.1,0.6-0.1,0.9c0,0,0,0,0.1,0c0.4-0.6,0.8-1.2,1.2-1.8c-0.2-0.1-0.3-0.3-0.3-0.5
+                            c0-0.1,0-0.2,0.1-0.4c0.1-0.3,0.2-0.6,0.2-0.9c0-0.4,0-0.8,0-1.2c0-0.5,0-1,0-1.6c0-0.4-0.1-0.8-0.1-1.2c0-0.1,0-0.3,0-0.4
+                            c0-0.2,0-0.3,0-0.5c0-0.5-0.2-0.9-0.5-1.2c0.1-0.3,0.2-0.5,0.2-0.8c0-0.1,0-0.2,0-0.3c0-0.2,0-0.4,0-0.5c-0.1-0.8-0.2-1.6-0.3-2.5
+                            c-0.5,0.1-0.8,0.2-1.2,0.3c0,0.9,0.1,1.8,0.1,2.7C65.8,21.9,66,22.1,66.1,22.4z M73.4,17.9c0,0.1,0,0.2,0,0.2c0,0.2-0.1,0.4-0.1,0.5
+                            c0,0.8,0.3,1.5,0.5,2.3c0.4-0.6,0.9-1.1,0.9-1.8c0-0.1,0-0.2,0-0.3c-0.1-0.7-0.2-1.5-0.3-2.2c-0.3,0.1-0.6,0.2-0.8,0.2
+                            c-0.2,0-0.2,0.1-0.2,0.2c0,0,0,0.1,0,0.1C73.3,17.3,73.4,17.6,73.4,17.9z M70.8,18.2c0,0.6,0.2,1.1,0.5,1.6c0,0.6,0.1,1.5,0.4,2.8
+                            c0.1,0.3,0.5,0.6,0.6,0.6c0.1-0.4,0.3-0.8,0.4-1.2c0,0,0,0,0,0c0-0.3-0.2-0.7-0.4-1c-0.1-0.1,0-1.2,0-1.7c0-0.1,0-0.1,0-0.2
+                            c0-0.3-0.2-0.6-0.5-0.9c-0.1-0.1-0.2-0.2-0.2-0.3c0,0,0-0.1,0-0.1c0-0.1,0-0.1,0-0.2c0-0.2-0.1-0.3-0.3-0.3c0,0-0.1,0-0.1,0
+                            c-0.2,0-0.4,0.1-0.6,0.1C70.7,17.8,70.8,18,70.8,18.2C70.8,18.2,70.8,18.2,70.8,18.2z M35.5,13c-0.5,0.1-0.9,0.3-1.4,0.5
+                            c0.3,0.8,0.4,0.9,1.1,0.7c0.4-0.1,0.8-0.1,1.2-0.2c0.7-0.1,1.5,0.1,2.2-0.3c0.2-0.1,0.5,0,0.7,0c0.4,0,0.8,0.1,1.2,0.1
+                            c0,0,0-0.1,0-0.1c-0.2-0.2-0.4-0.4-0.5-0.7c-0.2-0.5-0.6-0.6-1-0.6c-0.2,0-0.3,0-0.5,0.1C37.5,12.7,36.5,12.8,35.5,13z M29.6,0
+                            C29.6,0,29.6,0,29.6,0l-0.1,0.8c0.2-0.1,0.3-0.2,0.5-0.3C29.9,0.3,29.8,0.2,29.6,0z M30.8,1.5C30.4,1.7,30,2,29.6,2.2
+                            c-0.1,0-0.1,0.1-0.1,0.2c0,0.4-0.1,0.9-0.1,1.3c0.8-0.4,1.5-0.8,2.2-1.2C31.3,2.2,31.1,1.8,30.8,1.5z M55.5,30.5
+                            c0.3,0,0.6-0.2,0.7-0.6c0.1-0.9,0.3-1.8,0.4-2.6c0-0.5,0.1-1,0.1-1.6c0-0.4,0-0.9-0.1-1.3c-0.1-0.9-0.5-1.9-0.7-2.9
+                            c-0.2,0.1-0.6,0.2-0.6,0.3c-0.1,0.3-0.1,0.5-0.1,0.8c0,0.3,0.1,0.5,0.2,0.8c0.1,0.1,0.1,0.2,0.1,0.3c0.1,0.8,0.4,1.5,0.4,2.3
+                            c0,0.3,0,0.6-0.2,0.8c0,0,0,0,0,0c0,0,0,0,0,0.1c0,0,0,0,0,0c-0.1,0.8-0.1,1.7-0.4,2.5c-0.1,0.2-0.1,0.4-0.2,0.6c0,0,0,0.1,0,0.1
+                            C55,30.3,55.2,30.5,55.5,30.5z M33,4.4C33,4.3,33,4.3,33,4.4c-0.2-0.4-0.5-0.8-0.8-1.1C31.8,3.5,31.4,3.7,31,4c-0.5,0.3-1,0.6-1.4,1
+                            c-0.1,0.1-0.2,0.2-0.2,0.3c0,0.5-0.1,1-0.1,1.6c0.1-0.1,0.2-0.1,0.3-0.1C30.7,5.9,31.8,5.1,33,4.4z M29.9,7.1
+                            c-0.1,0.1-0.2,0.3-0.2,0.4c0,0,0,0.1,0,0.1c0.1,0.2,0.3,0.3,0.5,0.3c0.1,0,0.3,0,0.5-0.1c1.2-0.6,2.3-1.1,3.5-1.7c0,0,0-0.1,0.1-0.1
+                            c-0.3-0.3-0.5-0.7-0.8-1c-0.8,0.5-1.6,1-2.4,1.4C30.7,6.6,30.3,6.8,29.9,7.1z M30.3,9.7c0.3-0.1,0.6-0.3,0.9-0.4
+                            c1.5-0.6,2.9-1.1,4.4-1.7c-0.2-0.3-0.4-0.4-0.5-0.6c-0.1-0.2-0.3-0.3-0.4-0.3c-0.1,0-0.3,0.1-0.4,0.1c-0.8,0.4-1.6,0.8-2.5,1.1
+                            c-0.8,0.3-1.6,0.6-2.4,0.9c-0.1,0-0.2,0.1-0.2,0.2c0,0.3-0.1,0.7-0.1,0.9c0.3,0,0.6,0,0.8-0.1C30,9.8,30.2,9.8,30.3,9.7z M14.8,45.2
+                            c0-0.7-0.3-1.2-0.7-1.7c-0.3-0.5-0.7-0.9-0.7-1.5c0,0,0-0.1,0-0.1c0,0,0,0,0,0c0-0.1-0.1-0.2-0.1-0.2c-0.4-0.7-0.6-1.3-0.6-2.1
+                            c0-0.1,0-0.2,0-0.3c0-0.2,0-0.3,0-0.5c0-0.2,0-0.4,0-0.6c0-0.1,0-0.2,0-0.4c0-0.2,0.1-0.4,0.2-0.5c0.1-0.1,0.2-0.3,0.2-0.4
+                            c0,0,0,0,0,0c0-0.4-0.1-0.7-0.2-1.1c-0.5,0.1-0.8,0.2-0.8,0.8c0,0.5-0.2,1.1-0.2,1.6c0,0,0,0.1,0,0.1c0.1,1.3,0.2,2.6,0.6,3.9
+                            c0.4,1.1,0.6,2.3,1.2,3.4c0.1,0.1,0.2,0.3,0.4,0.3c0.5,0.2,1.1,0.4,1.6,0.6c0,0,0,0,0,0c-0.2-0.3-0.5-0.5-0.7-0.8
+                            C14.9,45.4,14.8,45.3,14.8,45.2z M67.8,58.1c0.2-1.1,0.5-2,1-3c0.1-0.3,0.2-0.5,0.3-0.8c0-0.1,0-0.1,0-0.2c0,0,0-0.1,0-0.1
+                            c-0.2-0.4-0.5-0.7-0.7-1.1c-0.1,0.1-0.1,0.2-0.1,0.3c-0.7,1.4-1.4,2.7-1.8,4.2C66.3,58,66,58.5,65.6,59c-0.8,0.9-1.3,2-1.3,3.2
+                            c0,0.1,0,0.1,0,0.2c0.3,0.1,0.5,0.1,0.7,0.2c0.1-0.1,0.2-0.2,0.3-0.3c0.6-0.1,0.6-0.1,0.6-0.7c0-0.1,0-0.2,0-0.3
+                            c0.2-0.8,0.7-1.3,1.1-1.9C67.4,59,67.7,58.6,67.8,58.1z M62.4,58.9c0.4-1.6,1-3.1,1.9-4.4c0.3-0.5,0.7-0.9,0.9-1.5
+                            c0.3-1,0.6-1.9,1.2-2.8c0,0,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2c-0.2-0.3-0.4-0.6-0.6-0.9c0,0-0.1,0-0.1,0.1c-0.7,1.3-1.5,2.6-2.2,3.9
+                            c-0.3,0.5-0.5,1.1-0.9,1.5c-0.7,0.8-1.6,1.4-2.4,2.2c-0.4,0.3-0.7,0.7-0.8,1.2c0,0.1,0,0.1-0.1,0.2c-0.7,0.8-0.9,1.9-1.9,2.5
+                            c0.5,0.1,0.9,0.2,1.3,0.4c0.4,0.1,0.5,0,0.7-0.3c0.5-1.3,1.2-2.5,2-3.7c0.2-0.2,0.4-0.4,0.6-0.6c0,0,0.1,0.1,0.1,0.1
+                            c-0.1,0.2-0.2,0.5-0.3,0.7c-0.2,0.3-0.4,0.6-0.5,1c-0.1,0.4-0.2,0.7-0.5,1c-0.1,0.2-0.3,0.3-0.3,0.5c0,0.6-0.3,1.1-0.8,1.5
+                            c0.4,0.1,0.8,0.2,1.2,0.3c0.2,0.1,0.3,0,0.4-0.2c0.1-0.1,0.1-0.3,0.2-0.4c0.2-0.6,0.3-1.1,0.8-1.6C62.3,59.1,62.4,59,62.4,58.9z
+                                M65.2,58.2c0.1-0.4,0.2-0.8,0.3-1.1c0.2-0.5,0.5-0.9,0.8-1.3c0.2-0.4,0.4-0.7,0.4-1.1c0-0.5,0.1-0.9,0.6-1.3
+                            c0.4-0.3,0.4-0.7,0.4-1.1c0-0.1,0-0.3,0-0.4c0-0.3-0.4-0.7-0.6-1c-0.3,0.4-0.4,0.8-0.4,1.3c0,0.2-0.1,0.4-0.2,0.6
+                            c-0.3,0.5-0.7,0.9-0.8,1.3c-0.2,0.6-0.5,1.1-0.8,1.6c-0.2,0.4-0.5,0.8-0.7,1.1c-0.1,0.1-0.1,0.3-0.1,0.4c0,0,0,0,0,0
+                            c0,0.1,0,0.1,0,0.2c0,0.6-0.3,1.1-0.6,1.7c-0.5,0.8-1,1.7-1.5,2.6c0.5,0.2,1,0.3,1.4,0.4C63.8,61,64.4,60,65,59
+                            C65.1,58.7,65.1,58.5,65.2,58.2z M58.5,57.4c0.1-0.2,0.2-0.4,0.3-0.6c0.9-1,2-1.8,2.8-2.8c1-1.3,1.8-2.7,2.7-4
+                            c0.4-0.6,0.7-1.1,1.1-1.7c-0.3-0.4-0.6-0.8-0.8-1.3c-0.5,0.9-1,1.7-1.5,2.5c-0.1,0.2-0.2,0.3-0.4,0.5c-0.2,0.3-0.4,0.6-0.7,0.9
+                            c-0.1,0.2-0.2,0.4-0.3,0.4c-0.5,0.2-0.7,0.5-0.8,1c-0.1,0.2-0.1,0.5-0.2,0.7c-0.1,0.1-0.2,0.3-0.4,0.3c-0.3,0-0.5,0.2-0.7,0.4
+                            c-1.5,2-3,3.9-4.5,6c0.5,0.1,0.9,0.3,1.4,0.4c0.1,0,0.2-0.1,0.3-0.1c0.4-0.5,0.9-1,1.3-1.6C58.2,58.1,58.4,57.8,58.5,57.4z
+                                M43.2,61.6c-0.7,0-1.3,0-2-0.3c-0.5-0.2-1-0.1-1.5,0.1c-0.1,0.1-0.3,0.1-0.4,0c-0.4-0.1-0.8-0.3-1.2-0.5c-0.5-0.2-1-0.6-1.6-0.8
+                            c-1.4-0.5-2.8-1-4.2-1.6c-0.2-0.1-0.5-0.2-0.7-0.2c-0.5,0-0.9-0.2-1.3-0.5c-0.2-0.1-0.4-0.2-0.6-0.2c-0.4,0.1-0.6,0-0.9-0.1
+                            c-0.2-0.1-0.4-0.2-0.7-0.2c0,0.2,0,0.3,0,0.5c0,0.1,0,0.2,0,0.3c0,0,0,0,0,0.1c0,0.2,0.1,0.4,0.3,0.4c0.6,0.2,1.2,0.4,1.8,0.6
+                            c0.4,0.1,0.9,0.1,1.1,0.6c0.1,0.1,0.3,0.1,0.4,0.2c0.2,0.1,0.5,0.1,0.7,0.3c1,0.5,2.1,0.9,3.3,1.1c0.6,0.1,1.2,0.1,1.7,0.5
+                            c0.6,0.5,1.3,0.7,2,0.8c0.6,0.1,1.1,0.1,1.7,0.1c0.5,0,0.9,0,1.4,0c0.1,0,0.3,0,0.4,0c0.1,0,0.3,0,0.4,0c0.1,0,0.3-0.1,0.3-0.1
+                            c0.3-0.4,0.6-0.7,1-1.2C44.2,61.6,43.7,61.6,43.2,61.6z M58.8,53.7c0.5-0.7,1.1-1.3,1.6-2c0.4-0.5,0.9-1,1.1-1.5
+                            c0.3-0.7,0.7-1.3,1.3-1.8c0.2-0.2,0.4-0.4,0.6-0.7c0.4-0.4,0.4-0.9,0.4-1.4c0-0.1,0-0.1,0-0.2c0-0.3-0.4-0.7-0.7-1.1
+                            c-0.3,0.3-0.6,0.6-0.8,0.9c-0.2,0.3-0.3,0.6-0.5,0.9c-0.3,0.5-0.6,1-0.9,1.5c-0.2,0.3-0.2,0.6-0.4,0.9c-0.1,0.1-0.1,0.2-0.2,0.3
+                            C60,50,59.5,50.5,59,51c-0.6,0.6-1.2,1.3-1.7,2c-0.4,0.6-0.8,1.2-1.4,1.7c-0.3,0.3-0.6,0.6-0.8,1c-0.3,0.5-0.5,0.9-1.1,1
+                            c-0.1,0-0.2,0.1-0.3,0.2c-0.5,0.5-1,1-1.5,1.5c-0.1,0.1-0.2,0.3-0.3,0.4c0.3,0.1,0.6,0.2,0.9,0.3c0.4,0.1,0.8,0.4,1.2,0.3
+                            c0.3-0.1,0.6-0.6,0.8-0.9c0.5-0.7,1-1.4,1.6-2C57.4,55.7,58.1,54.7,58.8,53.7z M52.6,56.8C52.6,56.8,52.6,56.7,52.6,56.8
+                            C52.6,56.7,52.6,56.7,52.6,56.8c0-0.1,0.1-0.3,0.2-0.3c1.1-0.7,1.9-1.7,2.7-2.7c0.1-0.1,0.2-0.3,0.4-0.3c0.6-0.2,0.9-0.7,1.2-1.2
+                            c0.4-0.6,0.9-1.3,1.3-1.9c0.3-0.3,0.7-0.6,0.9-0.9c1.1-1.7,2.2-3.4,3.2-5.2c0,0,0-0.1,0-0.2c0-0.1,0-0.1,0-0.1
+                            c-0.3-0.5-0.6-0.9-0.9-1.4c0,0-0.1,0-0.1,0c0,0.1-0.1,0.3-0.1,0.4c0,0,0,0,0,0.1c0,0.1,0.1,0.2,0.1,0.3c0,0.4-0.3,0.7-0.5,1
+                            c-0.4,0.5-0.8,1.1-1.2,1.7c-0.6,0.9-1.2,1.7-1.8,2.5c-0.3,0.3-0.7,0.6-0.7,1.1c0,0,0,0,0,0c0,0,0,0,0,0c0,0.1-0.1,0.2-0.1,0.3
+                            c-0.6,0.8-1.3,1.6-2,2.3c-0.6,0.7-1.3,1.3-2,1.9c-0.2,0.2-0.5,0.4-0.8,0.6c-0.3,0.2-0.6,0.4-0.7,0.8c0,0.2-0.1,0.4-0.3,0.5
+                            c-0.8,0.6-1.5,1.3-2.5,1.5c-0.1,0-0.2,0.1-0.4,0.2c0.8,0.2,1.5,0.4,2.2,0.6c0.1,0,0.2,0,0.3-0.1c0.3-0.5,0.7-0.8,1.1-1
+                            C52.3,57.2,52.6,57.1,52.6,56.8z M50.9,55c0.1,0,0.1-0.1,0.2-0.2c0.1-0.5,0.6-0.7,1-1c0.3-0.2,0.6-0.4,0.8-0.7
+                            c0.2-0.5,0.6-0.8,1-1.1c0.3-0.2,0.6-0.3,0.8-0.5c0.1-0.1,0.2-0.3,0.2-0.4c0,0,0,0,0-0.1c0-0.1,0-0.1,0-0.2c0-0.1,0.1-0.2,0.2-0.3
+                            c1.2-1,2.1-2.2,2.8-3.6c0.7-1.2,1.5-2.4,2.3-3.5c0.4-0.5,0.8-1,1.2-1.5c-0.2-0.3-0.4-0.6-0.6-0.9c-0.1-0.1-0.1-0.2-0.1-0.3
+                            c0-0.1,0.1-0.3,0.2-0.4c1-1.5,2.1-3.1,3.1-4.6c0.3-0.5,0.5-1,0.7-1.5c0,0,0-0.1,0-0.1c0.1-0.6,0.2-1.1,0.3-1.7
+                            c0.2-1.2,0.4-2.4,0.4-3.6c0-0.1,0-0.3,0-0.4c0-0.2,0-0.4,0-0.6c0-0.4,0-0.9,0-1.3c0-0.1,0-0.1,0-0.2c0,0,0,0,0-0.1c0,0,0,0,0,0
+                            c0-0.2,0-0.4-0.1-0.6c-0.2-0.4-0.3-0.8-0.3-1.3c0-0.1,0-0.2,0-0.3c0-0.3,0.1-0.6,0.1-0.9c0-0.2,0-0.4-0.1-0.6
+                            c-0.3-0.7-0.3-1.5-0.3-2.2c0-0.1,0-0.1,0-0.2c0,0,0,0,0-0.1c0-0.3,0-0.6,0-0.9c-0.4,0.1-0.8,0.2-1.2,0.3c0.1,0.7,0.1,1.3,0.2,2
+                            c0,0.1,0,0.2,0,0.2c0,0.2,0,0.3,0,0.5c0,0.2,0,0.4,0.1,0.6c0.2,0.5,0.2,0.9,0.2,1.4c0,0.1,0,0.3,0,0.4c0,0.1,0,0.2,0,0.2
+                            c0,0.2,0.1,0.5,0.3,0.6c0.1,0,0.1,0.2,0.1,0.3c0,0,0,0,0,0c0,0.8,0,1.7-0.3,2.5c-0.1,0.3-0.1,0.6-0.1,0.9c0,0.1,0,0.3,0,0.4
+                            c0,0.2,0,0.4,0,0.6c0,0.3,0,0.6-0.1,0.9c-0.1,0.5-0.2,1-0.3,1.5c-0.1,0.4,0,0.8-0.1,1.1c-0.4,1.2-1.2,2-1.6,3.1
+                            c-0.4,1.3-0.7,2.5-1.6,4c-0.4,0.7-1,1.3-1,2.1c0,0.1,0,0.2,0,0.3c0,0,0,0,0,0c0,0,0,0.1,0,0.1c-0.3,0.1-0.6,0.1-0.9,0.2
+                            c0,0.1,0,0.1,0,0.2c0,0,0,0.1,0,0.1c0,0.1,0,0.1,0,0.2c0,0.4-0.2,0.8-0.5,1.1c-0.3,0.2-0.5,0.5-0.8,0.7c-0.3,0.3-0.6,0.6-0.7,1
+                            c-0.1,0.2-0.2,0.4-0.4,0.6c-0.6,0.7-1.3,1.3-1.8,2c-0.5,0.7-1,1.3-1.7,1.7c-0.2,0.1-0.4,0.3-0.5,0.4c-0.2,0.4-0.5,0.6-0.8,0.8
+                            c-0.3,0.2-0.6,0.4-1,0.7c-0.2,0.2-0.3,0.3-0.3,0.5c0,0.1,0,0.2,0.1,0.4c0.1,0.1,0.1,0.3,0.1,0.3c0,0.2-0.1,0.2-0.5,0.2
+                            c-0.8,0-1.5,0.2-2.2,0.7c-0.3,0.2-0.6,0.4-0.9,0.5c-0.8,0.3-1.6,0.6-2.4,1c-0.4,0.2-0.7,0.2-1.1,0.2c-0.6-0.1-1.2-0.1-1.9-0.1
+                            c-0.3,0-0.6,0-0.9-0.1c-1.3-0.2-2.7-0.4-4-0.6c-0.5-0.1-1-0.1-1.4-0.3c-0.3-0.2-0.6-0.3-0.9-0.1c-0.1,0.1-0.3,0-0.5-0.1
+                            c-1.4-0.6-2.9-1.3-4.3-2c-0.3-0.1-0.6-0.3-0.9-0.5c0,0.1,0,0.2,0,0.3c0,0,0,0.1,0,0.1c0,0.1,0,0.2,0,0.3c0,0.5,0.2,0.9,0.7,1.2
+                            c0.3,0.2,0.5,0.3,0.8,0.2c0.3-0.1,0.5,0,0.7,0.2c0.2,0.2,0.4,0.3,0.6,0.5c0.2,0.2,0.5,0.4,0.7,0.7c0.3,0.6,0.7,1,1.3,1.2
+                            c0.9,0.4,1.9,0.8,2.8,1.2c0.9,0.4,1.8,0.5,2.6,1c0,0,0,0,0,0c0,0,0,0,0,0c0.9,0.2,1.8,0.4,2.7,0.6c0.6,0.1,1.3,0.3,2,0.2
+                            c0.8-0.2,1.6-0.2,2.5-0.3c0.1,0,0.3-0.1,0.3-0.1c0.4-0.5,0.8-1,1.2-1.5c-0.4,0-0.7,0-1.1-0.1c-0.6-0.1-1.2,0-1.7,0.4
+                            c-0.2,0.1-0.4,0.2-0.7,0.2c-1.1,0-2.1-0.1-3.1-0.5c-0.3-0.1-0.6-0.2-0.9-0.2c-0.7-0.1-1.4-0.2-2.1-0.4c-1.3-0.4-2.5-0.9-3.7-1.4
+                            c-0.2-0.1-0.4-0.2-0.4-0.4c0,0,0-0.1,0-0.1c0.1,0,0.2,0,0.3,0.1c0.8,0.3,1.7,0.6,2.5,0.9c0.2,0.1,0.5,0,0.8,0.1c0.4,0,0.9,0,1.3,0.2
+                            c0.7,0.3,1.4,0.6,2.1,0.6c1.7,0,3.5,0.1,5.1-0.6c0.2-0.1,0.4-0.1,0.5-0.1c0.5,0,0.8-0.3,1.1-0.6c0.1-0.1,0.4-0.3,0.5-0.3
+                            c0.6,0,1.1-0.2,1.5-0.5C49.8,55.7,50.4,55.4,50.9,55z M74.2,61.7c-0.2,0.6-0.5,1.2-0.7,1.8c0,0.1,0,0.1,0,0.2c0,0.1,0,0.1,0,0.2
+                            c0,0,0,0,0,0c0,0.1,0,0.3,0,0.4c0,0.2,0,0.4,0,0.7c0.3,0.1,0.7,0.2,1.1,0.3c0.2-0.5,0.3-0.9,0.5-1.3c0-0.2,0.1-0.4,0.1-0.5
+                            c0-0.1,0-0.2,0-0.2C74.8,62.7,74.5,62.2,74.2,61.7z M75.6,16.2v1.9c0.6-0.6,1-1.3,1.1-2.2C76.2,16,75.9,16.1,75.6,16.2z M69.7,59.4
+                            c0.2-1,0.6-1.9,0.9-2.9c0,0,0-0.1,0-0.1c0-0.1,0-0.1,0-0.2c-0.2-0.4-0.5-0.7-0.7-1.1c-0.2,0.4-0.4,0.7-0.5,1
+                            c-0.2,0.5-0.5,0.9-0.6,1.4c-0.3,1.2-0.9,2.2-1.4,3.3c-0.3,0.7-0.5,1.4-0.7,2.2c0.6,0.2,1,0.3,1.5,0.4c0.3-0.7,0.5-1.4,0.8-2.1
+                            C69.1,60.7,69.6,60.2,69.7,59.4z M76.1,64.8c0,0-0.1,0-0.1,0c-0.1,0.2-0.1,0.5-0.2,0.7c0,0,0,0,0,0c0,0.1,0.1,0.2,0.2,0.2
+                            c0.3,0.1,0.5,0.2,0.9,0.2C76.6,65.5,76.4,65.1,76.1,64.8z M9,42.9C9,42.9,9,42.8,9,42.9c0-0.4-0.1-0.7-0.3-1
+                            c-0.1-0.2-0.3-0.4-0.3-0.6c0-0.2,0-0.3,0-0.5c0-0.3,0-0.5,0-0.8c0.1-1,0.1-1.9,0.2-2.9c-0.3,0.1-0.6,0.2-0.9,0.3
+                            c-0.1,0-0.2,0.1-0.2,0.1c-0.1,0.5-0.3,1-0.3,1.5c0,0.1,0,0.1,0,0.2c0.2,1.3,0.5,2.6,0.7,3.9c0,0.1,0.1,0.2,0.2,0.3
+                            c0.3,0.1,0.7,0.3,1,0.4C9.1,43.6,9,43.3,9,42.9C9,42.9,9,42.9,9,42.9z M73.8,61.3C73.8,61.3,73.8,61.2,73.8,61.3
+                            c-0.3-0.6-0.7-1.1-1-1.6c0,0-0.1,0-0.1,0c-0.1,0.4-0.3,0.8-0.4,1.3c0,0.1-0.1,0.3-0.1,0.4c-0.1,0.3-0.3,0.6-0.4,0.9
+                            c-0.3,0.6-0.5,1.3-0.8,2c0.5,0.1,0.9,0.3,1.4,0.4c0.2-0.6,0.4-1.1,0.6-1.7c0.2-0.5,0.6-1,0.8-1.6C73.8,61.4,73.8,61.3,73.8,61.3z
+                                M71.6,60.4c0-0.5,0-1,0.5-1.4c0,0,0.1-0.2,0.1-0.2c0,0,0-0.1,0-0.1c-0.3-0.5-0.6-0.9-0.9-1.4c-0.4,0.9-0.7,1.7-1,2.6
+                            c0,0.1,0,0.2-0.1,0.3c-0.1,0.4-0.1,0.8-0.3,1.1c-0.3,0.7-0.6,1.3-0.9,2c-0.1,0.1-0.1,0.2-0.2,0.4c0.5,0.1,1,0.3,1.4,0.4
+                            c0.4-0.9,0.8-1.8,1.1-2.7C71.5,61.1,71.6,60.7,71.6,60.4z M29.9,57.5c0.4,0,0.6-0.1,0.6-0.3c0-0.1,0-0.2-0.1-0.4
+                            c-0.1-0.2-0.2-0.3-0.3-0.4c-0.6-0.4-1.3-0.7-2-1.1c0,0.2,0,0.4,0,0.6c0,0.1,0,0.3,0,0.4c0,0.1,0,0.2,0.1,0.2
+                            C28.7,57,29.2,57.4,29.9,57.5z M29,78.7c0,0.3,0,0.6,0,0.9c0,0.3,0,0.5,0,0.8c0,0.2,0.1,0.3,0.2,0.5c0.3-0.4,0.6-0.7,0.9-1.1
+                            c0,0,0-0.1,0-0.2c0-0.1,0-0.2-0.1-0.2C29.8,79.2,29.4,79,29,78.7z M29.9,53.1c0.1,0,0.3,0.1,0.4,0.2c1.7,0.7,3.4,1.4,5.1,2
+                            c0.4,0.1,0.8,0.1,1.2,0.1c0.1,0,0.3,0,0.4,0c0.3,0,0.5,0,0.8,0.1c1,0.2,1.9,0.4,2.9,0.2c0.9-0.2,1.9-0.4,2.9-0.5
+                            c1-0.1,1.8-0.6,2.7-0.8c0.1,0,0.1,0,0.2-0.1c0.2-0.1,0.3-0.2,0.3-0.3c0-0.1,0-0.2-0.1-0.2c-0.1-0.2-0.1-0.4-0.2-0.5
+                            c0.1,0,0.2,0,0.3,0.1c0.4,0.4,0.8,0.3,1.3,0.2c0.3-0.1,0.3-0.3,0.3-0.5c0,0,0-0.1,0-0.1c0-0.1,0-0.1,0-0.2c0-0.4,0.2-0.4,0.5-0.3
+                            c0.5,0.1,0.8,0,1.2-0.3c0.5-0.5,1.1-1,1.6-1.4c0.3-0.2,0.5-0.5,0.5-0.9c0,0,0-0.1,0-0.1c0,0,0,0,0-0.1c0-0.2,0.1-0.2,0.2-0.3
+                            c0.4-0.2,0.8-0.4,1.2-0.6c0.1-0.1,0.3-0.2,0.3-0.3c0-0.3,0.2-0.5,0.5-0.6c0.3-0.2,0.6-0.4,0.8-0.6c0.3-0.2,0.4-0.5,0.4-0.8
+                            c0-0.2,0-0.4,0.2-0.6c0.2-0.3,0.5-0.6,0.8-0.9c0.2-0.2,0.3-0.4,0.3-0.6c0-0.1,0-0.2-0.1-0.3c0-0.1,0-0.2,0-0.2
+                            c0-0.2,0.1-0.4,0.4-0.5c0.2-0.1,0.4-0.2,0.5-0.4c0.2-0.6,0.4-0.8,0.9-1.1c0.4-0.2,0.7-1.4,0.8-1.8c0.1-0.6,0.3-0.5,0.5-1.1
+                            c0-0.1,0.2-0.2,0.2-0.3c0.2-0.4,0.1-0.4,0.2-0.9c0.4-1.2,0.9-2.5,1.4-3.7c0.3-0.6,0.3-1.2,0.4-1.8c0-1.3,0.7-2.8,0.7-4.2
+                            c0,0,0.2-2.3,0.2-2.5c0-0.1,0-0.3-0.1-0.5c-0.1-0.4-0.2-0.9-0.2-1.3c0-0.1,0-0.2,0-0.3c0-0.1,0-0.1,0-0.2c0-0.1,0-0.2,0-0.3
+                            c-0.2-0.9-0.4-1.9-0.6-2.9c-0.2,0-0.4,0.1-0.8,0.2c0.2,1.5,0.4,3,0.6,4.6c0.1,0.4,0.1,0.7,0.1,1.1c0,0.4,0,0.8-0.2,1.2
+                            c-0.1,0.4-0.2,0.8-0.2,1.2c-0.2,2-1,3.7-1.2,5.7c-0.1,0.6-0.4,1.2-0.7,1.8c-0.1,0.3-0.2,0.5-0.4,0.7c-0.4,0.4-0.5,0.8-0.6,1.3
+                            c-0.2,1-0.4,1.8-1.1,2.8c-0.7,1.1-1.8,1.9-2.4,3.2c-0.4,0.9-0.8,1.7-2.1,1.6c0.2,0.4,0.3,0.7,0.5,1.1c-0.7-0.1-1,0.3-1.3,0.9
+                            c-0.1,0.2-0.2,0.5-0.4,0.6c-0.5,0.5-1.1,1-1.6,1.5c-0.2,0.2-0.5,0.4-0.7,0.5c-0.4,0.2-0.7,0.4-0.7,0.8c0,0.1,0,0.1,0,0.2
+                            c-0.2,0-0.3,0-0.5,0c-0.4-0.2-0.6,0-0.9,0.2c-0.3,0.3-0.7,0.5-1.1,0.6c-0.4,0-0.8,0.2-1,0.6c-0.2,0.4-0.5,0.6-0.8,0.7
+                            c-1.3,0.3-2.6,0.7-3.9,1c-0.3,0.1-0.7,0.1-1,0.1c-0.9-0.1-1.7-0.3-2.6-0.4c-0.4,0-0.8,0-1.1,0c-0.6,0.1-1.1,0-1.6-0.4
+                            c-0.4-0.3-1.1-0.1-1.5-0.6c-0.2-0.2-0.4-0.3-0.6-0.5c-0.3-0.2-0.5-0.4-0.9-0.3c-0.2,0-0.4-0.1-0.5-0.1c-1-0.5-1.9-0.9-2.9-1.4
+                            c-0.2-0.1-0.4-0.1-0.6-0.2c-0.2-0.1-0.5-0.2-0.7-0.3c-0.6-0.5-1.2-0.9-2-1c-0.2,0-0.4-0.2-0.6-0.3c-0.9-0.8-1.9-1.5-2.8-2.3
+                            c-1-0.8-1.9-1.7-2.3-2.9c-0.1-0.2-0.3-0.4-0.5-0.6c-0.1-0.1-0.2-0.3-0.3-0.4c-0.1-0.4-0.2-0.8-0.3-1.2c-0.2-0.6-0.3-1.2-0.3-1.8
+                            c0-0.1,0-0.2,0-0.3c0,0,0,0,0-0.1c0-0.1,0-0.2-0.1-0.3c-0.2-0.4-0.3-0.8-0.3-1.2c0-0.4,0.1-0.9,0.3-1.3c0.3-0.9,0.7-1.8,1-2.7
+                            c-0.6,0.2-1.1,0.4-1.6,0.6c-0.2,0.1-0.3,0.2-0.4,0.4c-0.5,1.3-0.5,2.7-0.6,4c0,0,0,0,0,0c0,0,0,0.1,0,0.1c0.7,2.1,1.3,4.2,2.3,6.1
+                            c0.6,1,1.2,2,2.1,2.8c0.9,0.8,2,1.4,3.2,1.8c1.2,0.5,2.5,0.9,3.7,1.4c0.6,0.2,0.6,0.2,0.6,0.9c0,0.1,0,0.3,0.1,0.4
+                            C28.7,52.4,29.2,53,29.9,53.1z M17.8,46c0-0.1-0.1-0.2-0.2-0.3c-0.4-0.8-1-1.5-1.3-2.3c-0.2-0.6-0.4-1.1-0.7-1.7
+                            c-0.1-0.1-0.1-0.2-0.1-0.3c0,0,0,0,0,0c0-0.1,0-0.2,0-0.3c0-0.6-0.2-1.2-0.4-1.7c-0.1-0.3-0.3-0.6-0.3-0.8c0,0,0,0,0-0.1
+                            c0.1-0.5,0.1-1.1,0.1-1.6c0-0.2,0-0.4,0-0.6c0,0,0,0,0,0c0-0.5,0.3-1,0.4-1.4c-0.6,0.1-1.1,0.3-1.1,1.1c-0.1,0.7-0.4,1.5-0.6,2.2
+                            c0,0.1,0,0.2,0,0.3c0,0.1,0,0.3,0.1,0.4c0.2,0.6,0.4,1.1,0.6,1.7c0.2,0.5,0.4,0.9,0.4,1.4c0.1,1.3,0.6,2.4,1.5,3.4
+                            c0.2,0.3,0.4,0.6,0.6,0.9c0.3,0.4,0.5,0.8,0.9,1.1c0.5,0.3,1.1,0.4,1.6,0.6c0,0,0.1-0.1,0.1-0.1c-0.3-0.3-0.6-0.6-1-0.9
+                            C18,46.6,17.8,46.4,17.8,46z M28.8,75.3c0,0.2,0,0.4,0,0.6c0,0.1,0,0.1,0,0.2c0,0.1,0,0.1,0,0.2c0,0.5,0.2,0.9,0.7,1.1
+                            c0.2,0.1,0.4,0.4,0.6,0.6c0.3,0.3,0.5,0.5,0.8,0.8c0.3-0.4,0.6-0.8,1-1.2C30.9,76.8,29.9,76,28.8,75.3
+                            C28.9,75.3,28.9,75.3,28.8,75.3z M10.3,37.7c0.4,0,0.6-0.1,0.6-0.4c0-0.1,0-0.2,0-0.3c0-0.2-0.1-0.4-0.2-0.7
+                            c-0.2,0.1-0.4,0.1-0.5,0.2c-0.1,0.1-0.3,0.1-0.3,0.2c-0.1,0.2-0.1,0.3-0.1,0.4C9.6,37.5,9.8,37.7,10.3,37.7z M11.2,42.5
+                            c-0.1-0.3-0.3-0.6-0.3-0.9c-0.1-0.9-0.1-1.7-0.2-2.6c0-0.4-0.1-0.7-0.1-1.1c0,0,0,0,0,0c-0.8,0-0.9,0.2-0.9,0.8c0,0,0,0.1,0,0.1
+                            c0,0.3,0,0.7,0.1,1c0.1,0.7,0.1,1.4,0.3,2c0.1,0.7,0.3,1.4,0.5,2.1c0.1,0.2,0.2,0.5,0.4,0.7c0.3,0.2,0.8,0.3,1.2,0.5
+                            c-0.1-0.3-0.2-0.6-0.3-1C11.6,43.6,11.4,43,11.2,42.5z M29.7,72.8c-0.3-0.3-0.6-0.6-0.9-0.9c0,0-0.1,0.1-0.1,0.1c0,0.3,0,0.6,0,0.9
+                            c0,0.2,0,0.4,0,0.5c0,0,0,0,0,0c0,0.3,0.1,0.4,0.3,0.6c0.7,0.5,1.3,1,1.9,1.5c0.5,0.4,1.1,0.8,1.7,1.2c0.3-0.4,0.6-0.7,0.8-1
+                            c-0.7-0.6-1.5-1.1-2.2-1.7C30.8,73.6,30.3,73.2,29.7,72.8z M32.4,65c-0.3-0.1-0.7-0.1-1-0.3c-0.7-0.5-1.4-1.1-2.1-1.7
+                            c-0.3-0.3-0.6-0.5-0.9-0.8c0,0-0.1,0-0.1,0.1c0,0.5,0,1,0.1,1.5c0,0.2,0.1,0.4,0.2,0.4c0.7,0.4,1.3,0.9,2,1.2
+                            c0.7,0.4,1.5,0.6,2.1,1.2c0.1,0.1,0.3,0.2,0.4,0.2c0.8,0.5,1.6,1,2.4,1.5c0.8,0.5,1.6,1.1,2.5,1.6c0.3-0.4,0.5-0.6,0.7-0.9
+                            c-2-1.3-3.9-2.7-5.9-4C32.7,65.1,32.6,65.1,32.4,65z M40.3,66.1c-0.2,0-0.4,0.1-0.4,0.2c0,0.1,0,0.1,0,0.2c0,0.2,0.2,0.5,0.6,0.7
+                            c0.2-0.2,0.4-0.5,0.6-0.7c-0.1-0.1-0.2-0.1-0.2-0.2C40.6,66.1,40.4,66.1,40.3,66.1z M38.8,63.7c-0.8-0.4-1.6-0.8-2.4-1
+                            c-1.3-0.3-2.4-0.9-3.6-1.3c-0.3-0.1-0.4-0.4-0.7-0.5c-0.2-0.1-0.4-0.3-0.6-0.3c-0.8,0.1-1.4-0.2-2.1-0.5c-0.4-0.2-0.7-0.3-1.1-0.5
+                            c0,0.3,0,0.6,0,0.8c0,0.2,0,0.5,0,0.7c0,0.1,0,0.2,0.1,0.3c0.4,0.5,0.7,0.9,1.3,1.1c0.2,0.1,0.4,0.2,0.5,0.3c0.5,0.5,1.1,0.8,1.8,1
+                            c0.4,0.1,0.7,0.4,1,0.7c0.2,0.3,0.6,0.5,0.9,0.7c0.2,0.1,0.4,0.2,0.6,0.3c1.6,1,3.2,2,4.8,3c0.2-0.3,0.4-0.6,0.6-0.8
+                            c-0.3-0.3-0.4-0.8-0.8-1c-0.9-0.7-1.9-1.3-3-1.6c-0.5-0.2-0.9-0.5-1.4-0.7c-0.1-0.1-0.3-0.1-0.4-0.2c-0.5-0.2-1-0.4-1.5-0.6
+                            c-0.8-0.4-1.5-0.9-2.2-1.4c-0.2-0.1-0.4-0.3-0.6-0.4c0.2-0.4,0.4-0.3,0.7-0.2c2.1,1,4.3,2,6.5,3c0.6,0.3,1.2,0.6,1.9,0.8
+                            c0.7,0.2,1.4,0.3,2.1,0.5c0.1,0,0.3,0,0.3-0.1c0.2-0.2,0.4-0.5,0.6-0.7c-0.1,0-0.2-0.1-0.2-0.1C40.8,64.6,39.8,64.2,38.8,63.7z
+                                M31.2,66.4c-0.3-0.2-0.8-0.4-1.2-0.3c-0.5,0-0.8-0.1-1.1-0.4c-0.1-0.1-0.2-0.2-0.4-0.3c0,0.3,0,0.6,0,0.9c0,0.3,0,0.6,0,0.9
+                            c0,0.1,0.1,0.2,0.2,0.3c1.7,1.5,3.3,3,5,4.4c0.6,0.5,1.2,0.8,1.8,1.3c0.3-0.3,0.5-0.6,0.7-0.8c-0.6-0.5-1.1-0.9-1.7-1.4
+                            c-0.2-0.1-0.3-0.3-0.5-0.3c-0.4-0.1-0.6-0.3-0.9-0.6c-0.1-0.1-0.2-0.3-0.4-0.4c-0.5-0.4-1.1-0.8-1.7-1.2c-0.5-0.3-0.7-0.5-0.7-0.9
+                            c0-0.1,0-0.1,0-0.2c0.1,0.1,0.1,0.1,0.2,0.2c0.3,0.3,0.7,0.6,1.2,0.5c0.2,0,0.4,0.3,0.6,0.4c0.1,0.1,0.2,0.3,0.3,0.4
+                            c1.3,1,2.6,1.9,4.2,2.6c0.1-0.2,0.3-0.4,0.4-0.5c-1-0.7-1.9-1.4-2.8-2C33.4,68,32.3,67.2,31.2,66.4z M28.7,69c0,0.2,0,0.5,0,0.7
+                            c0,0.5,0.1,0.9,0.6,1.2c0,0,0,0.1,0.1,0.1c0.7,0.6,1.3,1.3,2,1.8c0.9,0.7,1.8,1.4,2.8,2.1c0.3-0.4,0.6-0.8,0.9-1.1
+                            c-2.4-1.2-4.5-3-6.4-4.9C28.7,68.9,28.7,69,28.7,69z M41.9,63.2c-0.2-0.1-0.3-0.1-0.5-0.1c-0.3,0-0.6,0.1-0.9,0.4
+                            c0.2,0.1,0.3,0.3,0.5,0.4c0.5,0.2,0.9,0.5,1.4,0.5c0.2,0,0.4-0.4,0.6-0.7c0,0,0,0,0,0c0,0,0,0,0,0C42.7,63.5,42.3,63.3,41.9,63.2z
+                                M18.1,37.2c0,0.2,0,0.4,0.1,0.7c0.2,0.6,0.3,1.1,0.3,1.7c0,0.3,0.2,0.6,0.3,0.9c0.1,0.3,0.3,0.7,0.4,1c0.1,0.4,0.2,0.8,0.4,1.1
+                            c0.6,0.9,1.3,1.7,1.9,2.7c0.8,1.2,2,1.8,3.1,2.6c1.6,1.1,3.5,1.8,5.3,2.6c0.8,0.4,1.7,0.5,2.6,0.5c0.4,0,0.7-0.4,0.7-0.8
+                            c0,0,0,0,0,0c0-0.4-0.3-0.4-0.6-0.5c-0.1,0-0.1,0-0.2-0.1c-1.4-0.2-2.8-0.6-4.2-1.2c-0.3-0.1-0.5-0.3-0.8-0.5
+                            c-0.4-0.3-0.7-0.7-1.3-0.7c-0.1,0-0.2-0.1-0.3-0.2c-0.9-0.6-1.7-1.2-2.6-1.8c-0.3-0.2-0.5-0.4-0.5-0.7c0-0.1-0.7-0.4-0.7-0.4
+                            c0-0.3-0.4-1-0.5-1.2c-0.1-0.3-0.8-1.4-1.1-1.8c0.2-0.2-0.5-1.6-0.6-2.1c-0.1-0.3-0.2-0.7-0.2-1c0-0.1,0-0.1,0-0.2
+                            c0-0.2,0.1-0.4,0.1-0.6c0,0,0.3-1.1,0.4-1.9c0.1-0.8,0.4-1,0.6-1.4c0.1-0.2,0.3-0.4,0.6-0.6c0.2-0.3,0.4-0.5,0.6-0.8
+                            c-0.6,0.1-1.2,0.3-1.7,0.5c-0.3,0.2-0.6,0.4-0.9,0.7c-0.6,0.7-0.8,1.5-1,2.3C18.2,36.3,18.1,36.8,18.1,37.2z M20.9,36.2
+                            c-0.2,0.5-0.2,0.9-0.2,1.1c0,0.1,0.2,1.9,0.6,2.3c0.2,0.2,0.4,0.6,0.4,0.9c0,0.9,0.3,1.6,0.8,2.4c0.4,0.6,0.8,1.1,1.2,1.7
+                            c0.2,0.3,0.4,0.6,0.8,0.5c0.1,0,0.2,0.1,0.3,0.1c0.5,0.4,0.9,0.7,1.4,1.1c0.3,0.2,0.6,0.3,1,0.4c0.3,0.1,0.6,0.2,0.9,0.4
+                            c1,0.7,2,1.2,3.2,1.1c0.5,0,0.8,0.1,1.1,0.5c0.1,0.2,0.4,0.3,0.6,0.3c0.7,0.1,1.5,0.4,2.2,0c0,0,0.1,0,0.1,0c0,0,0,0,0,0
+                            c1.7-0.1,3.4-0.2,5-0.6c0.6-0.1,1.3,0,1.9-0.2c1.3-0.4,2.7-0.9,4-1.4c0.4-0.2,0.8-0.4,1-0.9c0.1-0.1,0.2-0.3,0.3-0.4
+                            c0.4-0.4,0.8-0.8,1.2-1.2c0.1-0.1,0.2-0.2,0.3-0.2c0.5,0,0.8-0.4,1.2-0.6c0.4-0.3,0.7-0.6,0.7-1.1c0-0.1,0-0.3-0.1-0.4
+                            c0.8-0.1,1.2-0.6,1.4-1.2c0-0.1,0.1-0.3,0.2-0.4c0.5-0.4,0.6-1,0.7-1.7c0-0.1,0.1-0.3,0.2-0.4c0.5-0.7,0.9-1.4,1.4-2.1
+                            c0,0,0-0.1,0-0.1c0,0,0-0.1,0-0.1c0,0,0-0.1,0-0.1c0.1-0.4,0.1-0.8,0.4-1c0.5-0.6,0.8-1.3,1.2-2c0.3-0.7,0.7-1.3,1-1.9
+                            c0.3-0.5,0.5-1.1,0.7-1.6c0.1-0.4,0.2-0.9,0.2-1.4c0.1-0.7,0.2-1.4,0.2-2.1c0,0,0,0,0-0.1c0-1-0.1-2.1-0.2-3.1
+                            c-0.1-0.6-0.2-1.1-0.3-1.7c-0.3,0.1-0.6,0.2-0.9,0.2c0.1,0.7,0.1,1.4,0.2,2c0,0.2,0,0.3,0,0.5c0,0.2,0,0.4,0,0.5
+                            c0,0.3,0,0.6,0.3,0.9c0,0,0,0.1,0,0.1c0,0.1,0,0.1,0,0.2c-0.1,0.8-0.2,1.5-0.3,2.3c0,0.2-0.1,0.3-0.1,0.5c0,0.2,0.1,0.4,0.2,0.6
+                            c-1,1.6-1.9,3.2-2.9,4.7c-0.2,0.3-0.4,0.7-0.4,1c0,0.1,0,0.2,0.1,0.4c-0.2,0.1-0.5,0.2-0.7,0.3c-0.8,0.9-1.4,1.9-1.7,3.1
+                            c-0.1,0.5-0.4,1-0.8,1.4c-0.4,0.4-0.9,0.8-1.2,1.3c-0.3,0.6-0.7,1.1-1.3,1.4c-0.1,0.1-0.2,0.2-0.3,0.3c-0.4,0.1-0.6,0.3-0.7,0.7
+                            c-0.1,0.2-0.3,0.3-0.5,0.4c-0.3,0.1-0.7,0.2-0.9,0.4c-0.8,0.5-1.6,1.1-2.4,1.6c-0.5,0.3-0.9,0.6-1.5,0.5c-0.1,0-0.2,0-0.3,0.1
+                            c-0.8,0.3-1.3,0.3-2.1,0.6c-0.3,0.1-0.7,0.1-1,0.1c-0.3,0-0.6,0.2-0.8,0.3c-0.6,0.1-1.2,0.2-1.9,0c-0.5-0.1-0.9-0.3-1.4-0.3
+                            c-0.9-0.1-1.7-0.1-2.6-0.1c-0.8,0-1.4-0.1-2.1-0.4c-0.3-0.2-0.8-0.2-1.1-0.4c-0.2-0.1-0.4-0.2-0.7-0.3c-0.3-0.1-0.5-0.3-0.8-0.4
+                            c-0.1-0.1-0.3-0.1-0.5-0.2c-1.1-0.5-2.1-1.1-2.8-2.1c-0.5-0.7-1-1.4-1.5-2.1c0,0,0.1,0,0.1-0.1c0.4,0.3,0.9,0.7,1.3,1
+                            c0.9,0.7,1.6,1.8,2.8,2.3c0.5,0.2,0.8,0.6,1.4,0.6c0.1,0,0.2,0.1,0.2,0.1c0.6,0.5,1.4,0.8,2.2,0.9c0.3,0.1,0.6,0.1,1,0.1
+                            c0.3,0.4,0.7,0.5,1.3,0.3c1-0.3,2.1-0.5,3.2-0.1c0.1,0,0.3,0.1,0.5,0.1c1-0.1,1.9-0.2,2.9-0.3c1-0.2,2-0.5,3-0.8
+                            c0.7-0.2,1.3-0.6,1.7-1.2c0.1-0.2,0.4-0.3,0.6-0.3c0.6-0.1,1.1-0.3,1.5-0.7c0.5-0.4,1.1-0.8,1.6-1.2c0.1-0.1,0.2-0.1,0.2-0.2
+                            c0.2-0.7,0.7-1,1.3-1.3c0.2-0.1,0.5-0.3,0.6-0.5c0.1-0.1,0.1-0.2,0.1-0.2c0-0.1-0.1-0.2-0.3-0.3c-0.2-0.1-0.3-0.1-0.6-0.2
+                            c0.1,0,0.1-0.1,0.2-0.1c0.8,0,1.2-0.4,1.6-1c0.3-0.5,0.7-1,1.1-1.5c0.2-0.4,0.5-0.8,0.6-1.2c0.3-0.8,0.6-1.5,1.2-2.1
+                            c0.1-0.1,0.2-0.2,0.2-0.3c0.2-0.7,0.4-1.5,0.4-2.3c0-0.2,0-0.4,0-0.5c0-0.3,0-0.6,0-0.9c0-0.4,0-0.8,0.2-1.2
+                            c0.1-0.2,0.1-0.6,0.2-0.9c0,0,0-0.1,0-0.2c0,0,0,0,0,0l0,0c0-0.3,0.1-0.6,0.1-0.8c0-0.2,0-0.4-0.1-0.6c-0.1-0.3-0.2-0.6-0.3-0.9
+                            c-0.1-0.8-0.2-1.6-0.2-2.4c-0.4,0.1-0.8,0.2-1,0.3c0.1,0.9,0.2,1.6,0.3,2.4c0.1,0.5,0.1,1.1,0.2,1.6c0,0.1-0.1,0.4-0.1,0.9
+                            c0,0.4-0.2,1-0.2,1.4c-0.1,0.7,0,1.4-0.2,2.1c-0.1,0.7-0.4,1.4-0.6,2.1c-0.2,0.6-0.4,1.1-0.9,1.5c-0.1,0-0.1,0.1-0.1,0.2
+                            c-0.3,0.6-0.6,1.2-1,1.7c-0.5,0.7-1,1.4-1.7,1.9c-0.5,0.4-0.9,0.8-1.3,1.3c-0.3,0.4-0.6,0.8-0.9,1.1c-0.2,0.3-0.5,0.5-0.9,0.6
+                            c-0.4,0.1-0.7,0.4-1,0.6c-0.1,0.1-0.2,0.2-0.3,0.3c-0.9,0.6-1.8,1.1-2.7,1.6c-0.4,0.2-0.8,0.3-1.3,0.4c-0.1,0-0.3,0.1-0.4,0.2
+                            c-0.2,0.1-0.4,0.2-0.6,0.2c-0.5,0-1-0.1-1.5-0.1c-0.1,0-0.3,0.1-0.4,0.2c-0.2,0.3-0.5,0.4-0.8,0.4c-0.3,0-0.6-0.1-0.9-0.1
+                            c-1,0-2,0-3-0.1c-0.4,0-0.8-0.1-1.2-0.1c-1-0.1-1.9-0.2-2.8-0.7c-1.4-0.7-2.9-1.4-4-2.6c-0.6-0.7-1.2-1-2.1-1.5
+                            c-0.5-1.1-0.3-1.7-0.4-2.1c0.2-1.1,0.5-1.8,0.8-2.8c0,0,0.3-0.4,0.3-0.5c0,0,0.6-0.5,0.7-0.8c0.1-0.4-0.1-0.4,0.2-0.9
+                            c0,0,0.5-0.3,0.5-0.3c0.5,0.2,0.4,0,0.8-0.3c0.2-0.1,0.5-0.2,0.7-0.3c0,0,0.1,0.1,0.1,0.1c-0.2,0.3-0.4,0.6-0.5,0.9
+                            c-0.5,0.8-1,1.7-1.5,2.5c0,0.1-0.1,0.2-0.1,0.3c0,0.1,0,0.3,0,0.4c0,0.7,0.4,0.6,0.9,1.1c0.3,0.3,0.4,1.2,0.4,1.6c0,0.1,0,0.1,0,0.2
+                            c-0.3-0.4-0.5-0.2-0.7-0.6c-0.2-0.3-0.7-1.3-1-1.2c-0.2,0.1-0.2,0.7-0.2,0.9c0,0.1,0,0.2,0,0.3c0,0.3-0.1,0.6,0.2,1
+                            c0.6,0.7,1.6,1.3,1.9,2.2c0.1,0.2,0.2,0.4,0.4,0.5c0.8,0.2,1.4,0.7,2.1,1.1c1.1,0.6,2.3,0.8,3.5,0.9c0.7,0.1,1.3,0.1,2,0.1
+                            c0.7,0,1.4,0,2.1,0c0.4,0,0.9-0.1,1.3-0.2c0.6-0.2,1.2-0.4,1.9-0.6c1.7-0.5,3.4-0.8,4.8-1.9c0.3-0.2,0.6-0.4,0.7-0.9
+                            c0-0.1,0.2-0.2,0.3-0.1c0.5,0.1,0.8-0.1,1.1-0.5c0.2-0.3,0.3-0.7,0.6-0.8c0.6-0.4,0.9-1,1.2-1.6c0.2-0.4,0.2-0.3,0.4-0.8
+                            c0.2,0.1,0.6-0.2,0.9-0.5c0.8-0.7,1-0.9,1.1-1.1c0.1-0.2,0,0,0.1-0.2c0.2-0.3,0.6-0.6,0.7-1c0.5-1.6,0.9-3.3,1.4-4.9
+                            c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2c-0.1-0.2-0.1-0.4-0.1-0.5c0-0.4,0.1-0.7,0.2-1.1c0.1-0.3,0.1-0.6,0.1-0.9
+                            c0-0.4-0.1-0.8-0.4-1.1c-0.1-0.1-0.1-0.2-0.1-0.4c0-0.2,0-0.4,0-0.5c0-0.3,0-0.6,0-0.9c0-0.2-0.1-0.3-0.3-0.3
+                            c-0.5,0.1-0.6,0.2-0.6,0.5c0,0.1,0,0.2,0,0.3c0,0.1,0,0.2,0,0.4c0,0.4,0,0.7-0.1,1.1c0,0.2-0.1,0.4-0.1,0.6c0,0.4-0.1,0.7-0.1,1.1
+                            c0,0.3,0,0.6,0,1c0,0.4-0.1,0.8-0.1,1.2c0,0.3-0.1,0.6-0.1,1c0,0.1,0,0.3,0,0.4c0,0.1,0,0.2,0,0.3c0,0.2,0,0.4-0.2,0.6
+                            c-0.2,0.2-0.3,0.5-0.3,0.7c0,0.1,0,0.2,0,0.3c0,0.1,0,0.2,0,0.2c0,0.3-0.2,0.5-0.3,0.7c-0.2,0.3-0.4,0.7-0.6,1c-0.2,0.4-1.1,1-1.2,1
+                            c-0.1-0.5,0.2-1,0.2-1.1c0-0.2,0.1-0.5,0.2-0.6c0.2-0.5,0.2-0.7,0.4-1.2c0.1-0.2,0.2-0.4,0.2-0.6c0.3-1.3,0.5-2.7,0.8-4
+                            c0.1-0.5,0.1-1,0.1-1.4c0-0.8-0.1-1.7-0.1-2.5c0,0,0-0.1,0-0.1c0-0.1,0-0.2-0.1-0.3c-0.4,0.1-0.8,0.2-1.1,0.3c0,0.4,0,0.8,0,1.2
+                            c0,0.3,0,0.5,0,0.8c-0.1,0.6-0.3,1.3-0.3,1.9c0,0.2,0,0.4,0,0.6c0,0,0,0,0,0c0,0.1,0,0.1,0,0.2c-0.2,1-0.3,2-0.5,3.1
+                            c-0.3,1.5-0.5,3-1.5,4.2c-0.1,0.2-0.2,0.4-0.3,0.6c-0.4,0.7-0.7,1.3-1.3,1.8c-0.1,0.1-0.2,0.2-0.2,0.3c-0.1,0.4-0.4,0.4-0.7,0.3
+                            c-0.2-0.1-0.5-0.2-0.6,0.1c0,0.1,0,0.1,0,0.2c0,0.2,0,0.3,0,0.5c-0.4,0.3-1.3,0.4-1.3,1.3c0,0,0,0.1,0,0.1c-0.1-0.1-0.1-0.1-0.2-0.1
+                            c-0.6-0.5-1.2-0.3-1.5,0.3c-0.2,0.6-0.6,0.9-1.2,1c-0.4,0.1-0.7,0.2-1.1,0.3c-0.2,0.1-0.4,0.2-0.7,0c-0.2-0.1-0.5-0.1-0.7,0.1
+                            c-0.2,0.2-0.4,0.2-0.6,0.2c-0.6-0.1-1.2-0.2-1.8,0c-0.2,0.1-0.4,0.1-0.5,0c-0.5-0.2-0.9,0-1.3,0.2c-0.2,0.1-0.4,0.2-0.6,0.2
+                            c-0.2,0-0.3,0-0.5-0.1c-0.6-0.3-1.1-0.6-1.7-0.9c-0.8-0.3-1.7-0.6-2.5-0.9c-0.2-0.1-0.3-0.2-0.5-0.3c0.7-0.1,1.4-0.2,2.1,0.3
+                            c0.2,0.2,0.6,0.3,0.9,0.3c0.7,0.1,1.4,0.2,2.1,0.3c0.4,0,0.8,0.1,1.1,0c0.5-0.2,1-0.2,1.6-0.2c0.2,0,0.4,0,0.5,0
+                            c0.8-0.2,1.7-0.4,2.5-0.6c0.3-0.1,0.7-0.1,1-0.2c0.2-0.1,0.3-0.2,0.3-0.3c0-0.1,0.4-0.1,0.9-0.3c0.7-0.4,1.4-0.9,2.2-1.4
+                            c0.3-0.2,0.6-0.4,0.9-0.6c0.3-0.2,0.6-0.4,0.8-0.6c0.3-0.3,0.6-0.5,0.9-0.8c0.1-0.1,0.3-0.3,0.3-0.5c0-0.5,0.3-0.7,0.6-1.1
+                            c0.4-0.5,0.8-1,1.2-1.6c0.1-0.1,0-0.2,0.1-0.3c0-0.3,0-0.7,0.1-1c0-0.4,0-0.7,0.4-1c0.2-0.1,0.2-0.4,0.2-0.7c0,0,0,0,0-0.1
+                            c0-0.2,0-0.4,0-0.6c0-0.3,0-0.7,0.1-1c0.1-0.7,0.2-1.4,0.3-2.1c0-0.4,0.1-0.7,0.1-1.1c0-0.1,0-0.2,0-0.2c0-0.7-0.2-1.4-0.3-2.1
+                            c0-0.2-0.1-0.3-0.2-0.5c-0.6-0.8-1.3-1.7-1.9-2.5c-0.1-0.2-0.3-0.4-0.5-0.6c-0.2,0.3-0.3,0.4-0.3,0.6c0,0.1,0.1,0.2,0.2,0.4
+                            c0.2,0.2,0.3,0.4,0.4,0.6c0.3,0.6,0.5,1.2,0.7,1.7c0.1,0.2,0.1,0.5,0.2,0.7c0.1,0.9,0,1.7,0.1,2.6c0.1,0.4,0.1,0.8,0.1,1.1
+                            c0,0.9-0.2,1.7-0.3,2.6c-0.1,0.6-0.5,1.1-0.8,1.6c-0.4,0.8-0.9,1.6-1.4,2.4c-0.1,0.3-0.3,0.5-0.3,0.8c0,0.4-0.1,0.6-0.4,0.8
+                            c-0.6,0.6-1.2,1.3-2.2,1.5c-0.1,0-0.2,0.1-0.3,0.2c-0.6,0.6-1.3,1-2,1.3c-0.1,0-0.3,0.1-0.4,0.2c-0.3,0.3-0.6,0.4-0.9-0.1
+                            c-0.1,0.2-0.2,0.4-0.4,0.6c-0.1,0.1-0.1,0.2-0.2,0.2c-0.8,0.1-1.6,0.3-2.4,0.4c-0.2,0-0.4,0.1-0.5,0.2c-0.4,0.2-0.8,0.4-1.3,0.7
+                            c0,0,0,0,0-0.1c0-0.5-0.3-0.6-0.6-0.6c-0.6,0-1.2,0-1.8-0.1c-0.5,0-1.1,0-1.6-0.2c-0.7-0.3-1.4-0.7-2.3-0.7c0.2-0.3,0.3-0.7,0.3-1
+                            c0-0.4-0.1-0.9-0.3-1.3c-0.1-0.3-0.2-0.6-0.2-0.9c0-0.2,0-0.3,0-0.5c0.3-1.5,0.7-2.9,1.4-4.2c0-0.1,0.1-0.2,0.2-0.2
+                            c0.3-0.1,0.7-0.1,1.2-0.2c-0.1,0.4-0.2,0.6-0.4,0.9c-0.3,0.6-0.7,1.2-1.1,1.8c-0.4,0.7-0.6,1.4-0.6,2.2c0,0.1,0,0.3,0,0.4
+                            c0,0.4,0.2,0.8,0.7,0.9c0.3,0.1,0.5,0.1,0.8,0.2c0.8,0.3,1.6,0.2,2.4,0.1c0.8-0.1,1.7-0.2,2.5-0.4c0.6-0.1,1.2-0.3,1.6-0.6
+                            c1.1-0.8,2.2-1.8,3.2-2.7c0.2-0.2,0.3-0.6,0.4-1c0.1-0.2,0-0.4,0.1-0.6c0.1-0.4,0.1-0.8,0.1-1.3c0-0.7,0.6-1,0-1.6
+                            c0.1-0.1,0-0.4,0.1-0.5c0.2-0.1-0.2-0.4-0.2-0.5c0-0.1-0.1-0.2-0.2-0.4c-0.2-0.2-0.3-0.5-0.4-0.7c-0.2-0.4-0.3-0.9-0.5-1.3
+                            c-0.5-1.1-1.5-1.7-2.7-1.6c0,0-0.1,0-0.1,0c0,0-0.1,0-0.1,0c-0.8,0-1.5,0-2.3,0.1c-0.3,0-0.4,0.2-0.4,0.4c0,0,0,0,0,0
+                            c0,0.2,0.2,0.2,0.4,0.3c0.3,0.1,0.6,0.1,0.9,0.2c0.9,0.2,1.8,0.4,2.6,0.6c0.4,0.1,0.8,0.3,0.8,0.8c0,0,0,0.1,0,0.2c0,0,0,0,0,0
+                            c0,0.1,0.1,0.3,0.1,0.4l1,1.7v1.7c0,0-0.4,1.6-0.4,1.5c0,0-0.4,1.2-0.5,0.9c-0.2-0.4,0.3-1.8,0.2-2.3c-0.1-0.5,0-0.8,0-1
+                            c0-0.1-0.1-0.3-0.2-0.5c-0.1,0.1-0.3-0.2-0.4-0.2C36,28.9,36,29,36,29.5c-0.1,1.2-0.2,2.4-0.5,3.5c-0.4,1.7-1.6,2.6-3.2,2.9
+                            c-1,0.2-2-0.1-3.1-0.2c-0.3,0-0.3-0.3-0.3-0.5c0-0.2,0-0.4-0.1-0.6c-0.1-0.2-0.1-0.5-0.1-0.7c0-0.3,0.1-0.5,0.2-0.8
+                            c0.2-0.5,0.4-1,0.7-1.6c0.1-0.2,0.2-0.5,0.4-0.7c0.2-0.3,0.5-0.3,0.7-0.2c0.1,0,0.1,0.3,0.2,0.5c0,0,0,0,0,0c0,0.1,0,0.1-0.1,0.2
+                            c-0.3,0.5-0.6,1.1-0.9,1.6c-0.2,0.4-0.4,0.7-0.4,1.1c0,0.1,0,0.3,0.1,0.4c0,0.3,0.2,0.7,1,0.9c0.6,0.1,1.3,0.2,1.6,0.1
+                            c0.1,0,0.2-0.1,0.3-0.2c0.4-0.3,0.7-0.7,1.1-1c0.3-0.3,0.3-0.3,0.6-0.6c0-0.3,0.4-0.6,0.4-0.9c0-0.2-0.1-0.4-0.1-0.6
+                            c0,0,0-0.3,0-0.3c0-0.2,0.2-0.4,0.4-0.5c0.1-0.1,0.2-0.2,0.2-0.4c0-0.1,0-0.2,0-0.3c0-1-0.4-1.9-1-2.2c-0.3-0.2-0.4-0.2-0.8-0.5
+                            c0,0-0.6-0.1-0.6-0.2c-0.9-0.1-1.1,0-1.7-0.2c-0.4-0.1-0.7-0.2-1.1-0.2c-0.5,0-1,0-1.6,0l-0.1,1.5c0.3-0.3,0.7-0.5,1.1-0.4
+                            c0.4,0.1,0.5,0.1,0.7,0.1c0.8,0.1,1,0.3,1.8,0.4c0.3,0,1.1,0.3,1.1,0.6c0,0,0,0,0,0c0,0,0,0,0,0c0,0.4,0.6,0.8,0.5,1.3
+                            c0,0.3,0,0.5-0.2,0.9c0,0-0.3,0.9-0.4,1.1c-0.4,0.5-0.6,1-1.4,1.7c-0.2,0.1-0.5-0.2-0.5-0.4c0.4-0.7,0.7-1.3,1-2
+                            c0.1-0.2,0.2-0.5,0.2-0.8c0-0.9-0.6-1.8-1.5-1.9c-0.7-0.1-1-0.1-1.7,0.2c-0.1,0-0.7,0.3-0.7,0.3c-0.3,0.1-0.3,0.1-0.5,0.2
+                            c-1.2,0.4-2.2,0.9-3.4,1.2c-0.9,0.3-1.4,0.8-1.8,1.6c-0.1,0.2-0.2,0.3-0.3,0.4v0l-0.9,2C21.2,35.8,21,35.9,20.9,36.2z"></path>
+                    </svg>
+                </button>
+            </div>
+            <span>Facial Features</span>
+        </div>
+        
+
+        <div class="circle4">
+            <div class="circle4-img">
+                <button>
+                    <svg class="svg4" version="1.1" id="Layer_1___1306162270" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 84.5 89.3" enable-background="new 0 0 84.5 89.3" xml:space="preserve">
+                        <path d="M84.2,84.6c-0.8-5.9-2.6-11-5.6-16.2c-1.4-2.4-2.7-5.2-4.6-7.3c-1.2-1.4-0.8-1.5-0.5-3.4
+                            c0.2-1.5,0.4-3,0.5-4.5C75.4,40.8,72.6,27,66.7,16c-2.9-5.6-7.3-10.7-13.1-13.4c-1-0.5-1.9-0.7-3-0.8c-1.5-0.1-1.9-0.2-3.5-0.8
+                            c-1.7-0.6-4.3-1.2-6.1-1c-4.7,0.4-9.9,3.1-13.7,5.8c-3.8,2.7-6.5,6.5-8.6,10.5c-4.2,8.1-5.4,17.3-6.5,26.2
+                            c-0.7,5.5-0.3,11.1-0.7,16.5c-0.1,1.5,0.1,0.7-0.9,1.7c-0.9,0.9-1.9,1.7-2.7,2.7c-1.9,2.2-3.4,4.9-4.5,7.6c-1,2.5-1.8,5.2-2.3,7.8
+                            c-0.3,1.6-0.6,3.3-0.7,4.9c-0.1,1-0.6,2.8-0.2,3.9c0.8,2,5.6,1.5,7.3,1.6c1.6,0.1,3.2-0.1,4.7-0.2c1.8-0.1,2.1,0.2,2.8-1.7
+                            c0.9-2.7,4.5-10.7,7-4.6c0.5,1.1,0.7,2.5,0.8,3.7c0.1,0.5-0.1,1.9,0.1,2.3c0.4,0.7,1,0.5,2,0.5c3.3,0.1,6.6,0.1,9.9,0.1
+                            c6.6,0,13.3-0.3,19.9-0.3c1.8,0,3.6,0.1,5.4,0.1c0.8,0,3.4,0.4,3.9-0.1c0.3-0.3,0-3.9,0.1-4.4c0.1-1.3,0.2-3,0.9-4.1
+                            c1.6-2.4,2.9,0.6,3.5,2c0.6,1.2,1,2.5,1.2,3.8c0.5,2.1,0,2.2,2.3,2.1c2.8-0.1,5.7,0,8.5-0.1c0.8,0,1.8,0.2,2.6,0
+                            C85,87.7,84.4,86.4,84.2,84.6z M61.7,39.1c-0.4,0.9-0.6,1.7-1.7,1.8c-2.7,4.2-6.1,7.4-10.1,9.1c-0.1,2.4,0.6,6.1,1.2,7.4
+                            c0,0-2.9,0.9-8.8,0.9s-8.8-0.9-8.8-0.9c0.6-1.3,1.3-5,1.2-7.3c-1.8-0.7-3.6-1.6-5-2.7c-1.7-1.3-2.9-3.7-3.6-5.7
+                            c-0.3-0.9-0.5-2.3-0.5-2.3s-1.4-0.1-1.8-1.3c-0.5-1.6,0.2-3.9,0.8-5.4c1.5-4.3,1.2-10.1,6.7-14c5.7-4,12.5-0.2,16.4-5.6
+                            c0.3,0,0.7,0.1,1.2,0.4c0.4,0.2,1.3,0.5,1.8,0.8c6.8,3.1,9.4,12.2,10.4,19.1c0-0.2,0.1,0.8,0.2,1.1C61.4,35.5,62.1,38,61.7,39.1z"></path>
+                    </svg>
+                </button>
+            </div>
+            <span>Personality</span>
+        </div>
+        
+        <div class="hair-cuts-blond">
+            <div class="hair style1" style="transform: translate(700px, -140px);">
+                <img src="haircut/light blond/thumbnail-wig-bob-platinum.jpg">
+                <span>Bob</span>
+            </div>
+
+            <div class="hair style2" style="top: -64px ;transform: translate(740px, -60px);">
+                <img src="haircut/light blond/thumbnail-wig-long-texture-platinum.jpg">
+                <span>Long Straight</span>
+            </div>
+
+            <div class="hair style3" style="top: -128px; transform: translate(780px, 19px);">
+                <img src="haircut/light blond/thumbnail-wig-long-wavy-platinum.jpg">
+                <span>Long Texture</span>
+            </div>
+
+            <div class="hair style4" style="top: -192px; transform: translate(780px, 106px);">
+                <img src="haircut/light blond/thumbnail-wig-medium-straight-platinum.jpg">
+                <span>Long Wavy</span>
+            </div>
+
+            <div class="hair style5" style="top: -255px;transform: translate(740px, 186px);">
+                <img src="haircut/light blond/thumbnail-wig-medium-tight-curls-platinum.jpg">
+                <span>Med Straight</span>
+            </div>
+
+            <div class="hair style6" style="top: -319px; transform: translate(700px, 257px);">
+                <img src="haircut/light blond/thumbnail-wig-medium-wavy-platinum.jpg">
+                <span>Med Tight Curls</span>
+            </div>
+
+            <div class="hair style7" style="top:-382px; transform: translate(795px, -140px);">
+                <img src="haircut/light blond/thumbnail-wig-natural-long-platinum.jpg">
+                <span>Med Wavy</span>
+            </div>
+
+            <div class="hair style8" style="top:-447px; transform: translate(825px, -60px);">
+                <img src="haircut/light blond/thumbnail-wig-natural-short-platinum.jpg">
+                <span>Natural Long</span>
+            </div>
+
+            <div class="hair style9" style="top: -511px; transform: translate(855px, 19px);">
+                <img src="haircut/light blond/thumbnail-wig-pixie-platinum.jpg">
+                <span>Natural Short</span>
+            </div>
+
+            <div class="hair style10" style="top: -574px; transform: translate(857px, 106px);">
+                <img src="haircut/light blond/thumbnail-wig-short-curly-platinum.jpg">
+                <span>Short Curley</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="hair-cuts-blond-applied">
+        <img class="hair1" src="https://images.mattel.com/ag-design-studio/prod/dolls/static/hair/hair-bob-default-blonde-default-lets-explore%2B2019.png">
+        <img class="hair2" src="https://images.mattel.com/ag-design-studio/prod/dolls/static/hair/hair-long-straight-default-blonde-default-lets-explore%2B2019.png">
+        <img class="hair3" src="https://images.mattel.com/ag-design-studio/prod/dolls/static/hair/hair-long-texture-default-blonde-default-lets-explore%2B2019.png">
+        <img class="hair4" src="https://images.mattel.com/ag-design-studio/prod/dolls/static/hair/hair-long-wavy-default-platinum-default-lets-explore%2B2019.png">
+        <img class="hair5" src="https://images.mattel.com/ag-design-studio/prod/dolls/static/hair/hair-medium-straight-default-platinum-default-lets-explore%2B2019.png">
+        <img class="hair6" src="https://images.mattel.com/ag-design-studio/prod/dolls/static/hair/hair-medium-tight-curls-default-platinum-default-lets-explore%2B2019.png">
+        <img class="hair7" src="haircut/light blond/applied hair-medium-wavy-default-platinum-round-lets-explore%2B2019.png">
+        <img class="hair8" src="haircut/light blond/applied hair-natural-long-default-platinum-round-lets-explore%2B2019.png">
+        <img class="hair9" src="haircut/light blond/applied hair-natural-short-default-platinum-round-lets-explore%2B2019.png">
+        <img class="hair10" src="haircut/light blond/applied hair-pixie-default-platinum-round-lets-explore%2B2019.png">
+    </div>
+
+     <div class="hair-cuts-blue" style="position: relative;position: relative;top: -314px;left: 0px;">
+            <div class="hair blue-style1" style="transform: translate(702px, -140px);">
+                <img src="haircut/blue/thumbnail-wig-bob-blue.jpg" >
+                <span>Bob</span>
+            </div>
+
+            <div class="hair blue-style2" style="top: -64px ;transform: translate(741px, -17px);">
+                <img src="haircut/blue/thumbnail-wig-long-straight-blue.jpg">
+                <span>Long Straight</span>
+            </div>
+
+            <div class="hair blue-style3" style="top: -128px; transform: translate(781px, 191px);">
+                <img src="haircut//blue/thumbnail-wig-long-texture-blue.jpg">
+                <span>Long Texture</span>
+            </div>
+
+            <div class="hair blue-style4" style="top: -192px; transform: translate(779px, 148px);">
+                <img src="haircut//blue/thumbnail-wig-medium-straight-blue.jpg">
+                <span>Long Wavy</span>
+            </div>
+
+            <div class="hair blue-style5" style="top: -255px;transform: translate(701px, 428px)">
+                <img src="haircut/blue/thumbnail-wig-medium-tight-curls-blue.jpg">
+                <span>Med Straight</span>
+            </div>
+
+            <div class="hair blue-style6" style="top: -319px; transform: translate(798px, 74px)">
+                <img src="haircut/blue/thumbnail-wig-medium-wavy-blue.jpg">
+                <span>Med Tight Curls</span>
+            </div>
+
+            <div class="hair blue-style7" style=" transform: translate(824px, -183px);">
+                <img src="haircut/blue/thumbnail-wig-natural-long-blue.jpg">
+                <span>Med Wavy</span>
+            </div>
+
+            <div class="hair blue-style8" style=" transform: translate(855px, -128px);">
+                <img src="haircut/blue/thumbnail-wig-natural-short-blue.jpg">
+                <span>Natural Long</span>
+            </div>
+
+            <div class="hair blue-style9" style=" transform: translate(742px, 19px);">
+                <img src="haircut/blue/thumbnail-wig-pixie-blue.jpg">
+                <span>Natural Short</span>
+            </div>
+
+            <div class="hair blue-style10" style=" transform: translate(856px, -83px)">
+                <img src="haircut/blue/thumbnail-wig-short-curly-blue.jpg">
+                <span>Short Curley</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="hair-cuts-blue-applied">
+        <img class="blue-hair1" src="haircut/blue/blue-applied/thumbnail-wig-bob-blue.png">
+        <img class="blue-hair2" src="haircut/blue/blue-applied/thumbnail-wig-long-straight-blue.png">
+        <img class="blue-hair3" src="haircut/blue/blue-applied/thumbnail-wig-long-texture-blue.png">
+        <img class="blue-hair4" src="haircut/blue/blue-applied/thumbnail-wig-medium-straight-blue.png">
+        <img class="blue-hair5" src="haircut/blue/blue-applied/thumbnail-wig-medium-tight-curls-blue.png">
+        <img class="blue-hair6" src="haircut/blue/blue-applied/thumbnail-wig-medium-wavy-blue.png">
+        <img class="blue-hair7" src="haircut/blue/blue-applied/thumbnail-wig-natural-long-blue.png">
+        <img class="blue-hair8" src="haircut/blue/blue-applied/thumbnail-wig-natural-short-blue.png">
+        <img class="blue-hair9" src="haircut/blue/blue-applied/thumbnail-wig-pixie-blue.png">
+        <img class="blue-hair10" src="haircut/blue/blue-applied/thumbnail-wig-short-curly-blue.png">
+    </div>
+
+    <div class="hair-cuts-purple" style="position: absolute;top: 89px;left: 21px;">
+        <div class="hair purple-style1" style="position:absolute; transform: translate( 680px , -134px );">
+            <img src="haircut/Purple/thumbnail-wig-bob-purple.jpg" >
+            <span>Bob</span>
+        </div>
+
+        <div class="hair purple-style2" style="position:absolute; transform: translate( 719px , -53px );">
+            <img src="haircut/Purple/thumbnail-wig-long-straight-purple.jpg">
+            <span>Long Straight</span>
+        </div>
+
+        <div class="hair purple-style3" style="position:absolute; transform: translate( 759px , 25px );">
+            <img src="haircut/Purple/thumbnail-wig-long-texture-purple.jpg">
+            <span>Long Texture</span>
+        </div>
+
+        <div class="hair purple-style4" style="position:absolute; transform: translate( 760px , 112px );">
+            <img src="haircut/Purple/thumbnail-wig-long-wavy-purple.jpg">
+            <span>Long Wavy</span>
+        </div>
+
+        <div class="hair purple-style5" style="position:absolute; transform: translate( 720px , 193px );">
+            <img src="haircut/Purple/thumbnail-wig-medium-straight-purple.jpg">
+            <span>Med Straight</span>
+        </div>
+
+        <div class="hair purple-style6" style="position:absolute; transform: translate( 680px , 264px );">
+            <img src="haircut/Purple/thumbnail-wig-medium-tight-curls-purple.jpg">
+            <span>Med Tight Curls</span>
+        </div>
+
+        <div class="hair purple-style7" style="position:absolute; transform: translate( 775px , -133px );">
+            <img src="haircut/Purple/thumbnail-wig-medium-wavy-purple.jpg">
+            <span>Med Wavy</span>
+        </div>
+
+        <div class="hair purple-style8" style="position:absolute; transform: translate( 805px , -53px )">
+            <img src="haircut/Purple/thumbnail-wig-natural-long-purple.jpg">
+            <span>Natural Long</span>
+        </div>
+
+        <div class="hair purple-style9" style="position:absolute; transform: translate( 833px , 25px);">
+            <img src="haircut/Purple/thumbnail-wig-natural-short-purple.jpg">
+            <span>Natural Short</span>
+        </div>
+
+        <div class="hair purple-style10" style="position:absolute; transform: translate( 836px , 112px);">
+            <img src="haircut/Purple/thumbnail-wig-short-curly-purple.jpg">
+            <span>Short Curley</span>
+        </div>
+    </div>
+</div>
+
+<div class="hair-cuts-purple-applied">
+    <img class="purple-hair1" src="haircut/Purple/PNG/thumbnail-wig-bob-purple.png">
+    <img class="purple-hair2" src="haircut/Purple/PNG/thumbnail-wig-long-straight-purple.png">
+    <img class="purple-hair3" src="haircut/Purple/PNG/thumbnail-wig-long-texture-purple.png">
+    <img class="purple-hair4" src="haircut/Purple/PNG/thumbnail-wig-long-wavy-purple.png">
+    <img class="pueple-hair5" src="haircut/Purple/PNG/thumbnail-wig-medium-straight-purple.png">
+    <img class="purple-hair6" src="haircut/Purple/PNG/thumbnail-wig-medium-tight-curls-purple.png">
+    <img class="purple-hair7" src="haircut/Purple/PNG/thumbnail-wig-medium-wavy-purple.png">
+    <img class="purple-hair8" src="haircut//Purple/PNG/thumbnail-wig-natural-long-purple.png">
+    <img class="purple-hair9" src="haircut/Purple/PNG/thumbnail-wig-natural-short-purple.png">
+    <img class="purple-hair10" src="haircut/Purple/PNG/thumbnail-wig-short-curly-purple.png">
+</div>
+
+
+<div class="hair-cuts-pink" style="position: absolute;top: 89px;left: 21px;">
+    <div class="hair pink-style1" style="position:absolute; transform: translate( 680px , -134px );">
+        <img src="haircut/pink/thumbnail-wig-bob-pink.jpg" >
+        <span>Bob</span>
+    </div>
+
+    <div class="hair pink-style2" style="position:absolute; transform: translate( 719px , -53px );">
+        <img src="haircut/pink/thumbnail-wig-long-straight-pink.jpg">
+        <span>Long Straight</span>
+    </div>
+
+    <div class="hair pink-style3" style="position:absolute; transform: translate( 759px , 25px );">
+        <img src="haircut/pink/thumbnail-wig-long-texture-pink.jpg">
+        <span>Long Texture</span>
+    </div>
+
+    <div class="hair pink-style4" style="position:absolute; transform: translate( 760px , 112px );">
+        <img src="haircut/pink/thumbnail-wig-long-wavy-pink.jpg">
+        <span>Long Wavy</span>
+    </div>
+
+    <div class="hair pink-style5" style="position:absolute; transform: translate( 720px , 193px );">
+        <img src="haircut/pink/thumbnail-wig-medium-straight-pink.jpg">
+        <span>Med Straight</span>
+    </div>
+
+    <div class="hair pink-style6" style="position:absolute; transform: translate( 680px , 264px );">
+        <img src="haircut/pink/thumbnail-wig-medium-tight-curls-pink.jpg">
+        <span>Med Tight Curls</span>
+    </div>
+
+    <div class="hair pink-style7" style="position:absolute; transform: translate( 775px , -133px );">
+        <img src="haircut/pink/thumbnail-wig-medium-wavy-pink.jpg">
+        <span>Med Wavy</span>
+    </div>
+
+    <div class="hair pink-style8" style="position:absolute; transform: translate( 805px , -53px )">
+        <img src="haircut/pink/thumbnail-wig-natural-long-pink.jpg">
+        <span>Natural Long</span>
+    </div>
+
+    <div class="hair pink-style9" style="position:absolute; transform: translate( 833px , 25px);">
+        <img src="haircut/pink/thumbnail-wig-natural-short-pink.jpg">
+        <span>Natural Short</span>
+    </div>
+
+    <div class="hair pink-style10" style="position:absolute; transform: translate( 836px , 112px);">
+        <img src="haircut/pink/thumbnail-wig-short-curly-pink.jpg">
+        <span>Short Curley</span>
+    </div>
+</div>
+</div>
+
+<div class="hair-cuts-pink-applied">
+<img class="pink-hair1" src="https://images.mattel.com/ag-design-studio/prod/dolls/static/hair/hair-bob-default-pink-default-lets-explore%2B2019.png">
+<img class="pink-hair2" src="haircut/pink/PNG/thumbnail-wig-long-straight-pink.png">
+<img class="pink-hair3" src="haircut/pink/PNG/thumbnail-wig-long-texture-pink.png">
+<img class="pink-hair4" src="haircut/pink/PNG/thumbnail-wig-long-wavy-pink.png">
+<img class="pink-hair5" src="haircut/pink/PNG/thumbnail-wig-medium-straight-pink.png">
+<img class="pink-hair6" src="haircut/pink/PNG/thumbnail-wig-medium-tight-curls-pink.png">
+<img class="pink-hair7" src="haircut/pink/PNG/thumbnail-wig-medium-wavy-pink.png">
+<img class="pink-hair8" src="haircut/pink/PNG/thumbnail-wig-natural-short-pink.png">
+<img class="pink-hair9" src="haircut/pink/PNG/thumbnail-wig-pixie-pink.png">
+<img class="pink-hair10" src="haircut/pink/PNG/thumbnail-wig-short-curly-pink.png">
+</div>
+
+
+
+    <div class="hair-colors">
+        <img class="hair-color1" src="https://images.contentstack.io/v3/assets/bltd267ef4e225380f0/blt9c0059ae5752eb78/614a1518d7fc263e226a7ecb/hair-color-light-blond.png" style="position: relative;left: 1004px;top: 225px;">
+        <img class="hair-color2" src="https://images.contentstack.io/v3/assets/bltd267ef4e225380f0/bltdb66146102211b31/614a1518eed8b0445dc6204b/hair-color-blond.png" style="position: relative;top: 304px; left: 984px;">
+        <img class="hair-color3" src="https://images.contentstack.io/v3/assets/bltd267ef4e225380f0/bltfc653cdfd88e1b24/614a15191031833e1c638cf8/hair-color-red.png" style="position: relative;    left: 961px; top: 384px;">
+        <img class="hair-color4" src="https://images.contentstack.io/v3/assets/bltd267ef4e225380f0/bltc44345ee91edc8d8/614a1518845f6b45b4da7612/hair-color-brown.png" style="position: relative;left: 974px; top: 382px;">
+        <img class="hair-color5" src="https://images.contentstack.io/v3/assets/bltd267ef4e225380f0/blt311fa69ead01c599/614a1518faa81845ae917198/hair-color-dark-brown.png" style="position: relative;left: 798px; top: 551px;">
+        <img class="hair-color6" src="https://images.contentstack.io/v3/assets/bltd267ef4e225380f0/blt4a51b55e43409d00/614a15181a5bd73f66d73f25/hair-color-black.png" style="position: relative; left: 696px; top: 621px;">
+        <img class="hair-color7" src="https://images.contentstack.io/v3/assets/bltd267ef4e225380f0/blt789e0d110c012d1d/614a15197eb6664463aed465/hair-color-pink.png" style="position: relative;left: 713px; top: 469px;">
+        <img class="hair-color8" src="https://images.contentstack.io/v3/assets/bltd267ef4e225380f0/blt64ff798ace074654/61708737b685fa1bb5819ef6/thumbnail-hair-color-purple.jpg" style = "position: relative;top: 469px; left: 727px;">
+        <img class="hair-color9" src="https://images.contentstack.io/v3/assets/bltd267ef4e225380f0/blt14a52eddb68fe8ab/6170875fde12c91d936cb759/thumbnail-hair-color-blue.jpg" style="left: 634px; top: 303px;">
+    </div>
+
+    <div class="outfits">
+        <div class="outfit1" style="left: 126px;" >
+            <img src="https://images.contentstack.io/v3/assets/bltd267ef4e225380f0/blt7b1ec99d4fa18e7c/614a1591d7fc263e226a7ed7/outfit-lets-create.png" >
+            <span>Let's create</span>
+        </div>
+
+        <div class="outfit2" style="left: 54px;">
+            <img src="https://images.contentstack.io/v3/assets/bltd267ef4e225380f0/blt70659970c97573f0/614a15911031833e1c638d02/outfit-lets-explore.png" >
+            <span>Let's Explore</span>
+        </div>
+
+        <div class="outfit3" style="left: 17px;">
+            <img src="https://images.contentstack.io/v3/assets/bltd267ef4e225380f0/blt284bd163a813b878/614a1591845f6b45b4da761a/outfit-lets-move.png">
+            <span>Let's Move</span>
+        </div>
+
+        <div class="outfit4" style="left: 54px;">
+            <img src="https://images.contentstack.io/v3/assets/bltd267ef4e225380f0/bltf5ad0a319bc4d2ca/614a15917eb6664463aed475/outfit-lets-smile.png" >
+            <span>Let's Smile</span>
+        </div>
+
+        <div class="outfit5" style="left: 126px;">
+            <img src="https://images.contentstack.io/v3/assets/bltd267ef4e225380f0/bltd310a9d8952ec3c3/6171d398de12c91d936cc66c/lets-party-outfit.png">
+            <span>Let's Party</span>
+        </div>
+    </div>
+
+    <div class="outfits-applied">
+        <div class="outfit1-applied">
+            <img class="create" src="https://res.cloudinary.com/mattel-dtc-cloud/image/upload/images-mattel/ag-design-studio/prod/dolls/static/outfit/outfit-lets-create%252B2019-classic-pixie-default.png">
+            <img class="cap1" src="https://res.cloudinary.com/mattel-dtc-cloud/image/upload/images-mattel/ag-design-studio/prod/dolls/static/outfit/outfit-headpiece-lets-create%252B2019-pixie-default.png">
+        </div>
+
+        <div class="outfit2-applied">
+            <img class="explore" src="https://res.cloudinary.com/mattel-dtc-cloud/image/upload/images-mattel/ag-design-studio/prod/dolls/static/outfit/outfit-lets-explore%252B2019-classic-pixie-default.png">
+            <img class="cap2" src="https://res.cloudinary.com/mattel-dtc-cloud/image/upload/images-mattel/ag-design-studio/prod/dolls/static/outfit/outfit-headpiece-lets-explore%252B2019-pixie-default.png">
+        </div>
+
+        <div class="outfit3-applied">
+            <img class="move" src="https://res.cloudinary.com/mattel-dtc-cloud/image/upload/images-mattel/ag-design-studio/prod/dolls/static/outfit/outfit-lets-play-classic-pixie-default.png">
+            <img class="cap3" src="https://res.cloudinary.com/mattel-dtc-cloud/image/upload/images-mattel/ag-design-studio/prod/dolls/static/outfit/outfit-headpiece-lets-play-pixie-default.png">
+        </div>
+
+        <div class="outfit4-applied">
+            <img class="smile" src="https://res.cloudinary.com/mattel-dtc-cloud/image/upload/images-mattel/ag-design-studio/prod/dolls/static/outfit/outfit-lets-smile-classic-pixie-default.png">
+            <img class="cap4" src="https://res.cloudinary.com/mattel-dtc-cloud/image/upload/images-mattel/ag-design-studio/prod/dolls/static/outfit/outfit-headpiece-lets-smile-pixie-default.png">
+        </div>
+
+        <div class="outfit5-applied">
+            <img class="party" src="https://res.cloudinary.com/mattel-dtc-cloud/image/upload/images-mattel/ag-design-studio/prod/dolls/static/outfit/outfit-lets-party-classic-pixie-default.png">
+             <img class="cap5" src="https://res.cloudinary.com/mattel-dtc-cloud/image/upload/images-mattel/ag-design-studio/prod/dolls/static/outfit/outfit-headpiece-lets-party-pixie-default.png">
+         </div>
+    </div>
+
+    <div class="Facial-Features">
+        <div class="Face-circle" id="facee1">
+            <img class="face-circle2" src="thumbnail-face_mold-classic.jpg">
+            <span style="display: flex; justify-content: center; align-items: center;">Face</span>
+        </div>
+        <div class="eye-color-cirlce" id = "facee2">
+            <img src="thumbnail-left_eye-green.jpg">
+            <span>Eye Color</span>
+        </div>
+        <div class="Freckles" id="facee3">
+            <span class="plus1 material-icons-outlined" style="color: white">
+                add
+            </span>
+            <span>Freckles</span>
+        </div>
+        <div class="braces">
+            <span class="plus2 material-icons-outlined" style="color: white">
+                add
+            </span>
+            <span style="display: flex;justify-content: center;align-items: center;">Braces</span>
+        </div>
+        <div class="Hearing-Aid">
+            <span class="plus3 material-icons-outlined" style="color: white">
+                add
+            </span>
+            <span>Hearing Aid</span>
+        </div>
+    </div>
+
+    <div class="face-categories">
+        <div class="skin-tone">
+            <span class="skin-text">Skin Tone</span>
+            <div class="tone1">
+                <div class="tone1-img">
+                    <button class="tone" style="background: rgb(240, 200, 162);"></button>
+                </div>
+                <span>05</span>
+            </div>
+
+            <div class="tone2">
+                <div class="tone2-img">
+                    <button class="tone" style="background: rgb(228 187 143);"></button>
+                </div>
+                <span>10</span>
+            </div>
+
+            <div class="tone3">
+                <div class="tone3-img">
+                    <button class="tone" style="background: rgb(194 148 112)"></button>
+                </div>
+                <span>15</span>
+            </div>
+
+            <div class="tone4">
+                <div class="tone4-img">
+                    <button class="tone" style="background: rgb(195 146 106)"></button>
+                </div>
+                <span>20</span>
+            </div>
+
+            <div class="tone5">
+                <div class="tone5-img">
+                    <button class="tone" style="background: rgb(150 113 86);"></button>
+                </div>
+                <span>25</span>
+            </div>
+
+            <div class="tone6">
+                <div class="tone6-img">
+                    <button class="tone" style="background: rgb(110 81 65)"></button>
+                </div>
+                <span>30</span>
+            </div>
+        </div>
+        <div class="face-shape">
+            <span class="face-text">Face shape</span>
+            <div class="shape1">
+                <img src="thumbnail-face_mold-classic.jpg">
+                <span>A</span>
+            </div>
+
+            <div class="shape2">
+                <img src="thumbnail-face_mold-josephina.jpg">
+                <span>B</span>
+            </div>
+
+            <div class="shape3">
+                <img src="thumbnail-face_mold-jess.jpg">
+                <span>C</span>
+            </div>
+
+            <div class="shape4">
+                <img src="thumbnail-face_mold-sonali.jpg">
+                <span>D</span>
+            </div>
+
+            <div class="shape5">
+                <img src="thumbnail-face_mold-addy.jpg">
+                <span>E</span>
+            </div>
+        </div>
+        <div class="freckles">
+           <!--<img src="face shape/freckles/freckles-35.png">--> 
+        </div>
+    </div>
+
+    <div class="eyes-category">
+        <div class="both-eyes">
+            <img class="both-eyes-img" src="eyes/eyeCircle/thumbnail-left_eye-hazel.jpg">
+            <span>Both</span> </br>
+            <span class="changableText">Hazal</span>
+        </div>
+        <div class="left-eyes">
+            <span class="material-icons-outlined" style="color: white">
+                add
+            </span>
+            <span>Right</span> </br>
+            <span class="changableText">Hazal</span>
+        </div>
+        <div class="right-eyes">
+            <span class="material-icons-outlined" style="color: white">
+                add
+            </span>
+            <span>Left</span> </br>
+            <span class="changableText">Hazal</span>
+        </div>
+    </div>
+
+    <div class="eyes-circles-colors">
+        <div class="eye-color1">
+            <img class="green-color" src="eyes/eyeCircle/thumbnail-left_eye-green.jpg">
+            <span>Green</span>
+        </div>
+        <div class="eye-color2" style="right:50px">
+            <img class="Hazal-color" src="eyes/eyeCircle/thumbnail-left_eye-hazel.jpg">
+            <span>Hazal</span>
+        </div>
+        <div class="eye-color3" style="right:85px">
+            <img class="light-blue-color" src="eyes/eyeCircle/thumbnail-left_eye-lightblue.jpg">
+            <span>Light Blue</span>
+        </div>
+        <div class="eye-color4" style="right:85px">
+            <img class="blue-color" src="eyes/eyeCircle/thumbnail-left_eye-blue.jpg">
+            <span>Blue</span>
+            <span style="font-weight:700">Sold Out</span>
+        </div>
+        <div class="eye-color5" style="right:85px">
+            <img class="light-brown-color" src="eyes/eyeCircle/thumbnail-left_eye-lightbrown.jpg">
+            <span>Light Brown</span>
+        </div>
+        <div class="eye-color6" style="right:50px">
+            <img class="brown-color" src="eyes/eyeCircle/thumbnail-left_eye-brown.jpg">
+            <span>Brown</span>
+        </div>
+        <div class="eye-color7" style="right:0px">
+            <img class="grey-color" src="eyes/eyeCircle/thumbnail-left_eye-grey.jpg">
+            <span>Grey</span>
+        </div>
+    </div>
+    <img data-src="https://res.cloudinary.com/mattel-dtc-cloud/image/upload/l_images-mattel:ag-design-studio:prod:dolls:static:face:face-addy-35-short-curly-default.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:eyes:eyes-left-grey-addy-35.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:eyes:eyes-right-grey-addy-35.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:earrings:earrings-false.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:outfit:outfit-lets-explore%252B2019-addy-short-curly-default.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:hair:hair-short-curly-default-platinum-round-lets-explore%252B2019.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:outfit:outfit-headpiece-lets-explore%252B2019-short-curly-default.png/fl_layer_apply/c_crop,h_600,w_600,x_260,y_130/c_thumb,h_200,w_200/v1/images-mattel/ag-design-studio/prod/dolls/static/body/body-35.png?_a=ATAK9AA0" data-widths="[180,360,540,720,900,1080,1296,1512,1728,1944,2160,2376,2592,2808,3024]" data-sizes="auto" tabindex="-1" alt="round" sizes="98px" src="https://res.cloudinary.com/mattel-dtc-cloud/image/upload/l_images-mattel:ag-design-studio:prod:dolls:static:face:face-addy-35-short-curly-default.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:eyes:eyes-left-grey-addy-35.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:eyes:eyes-right-grey-addy-35.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:earrings:earrings-false.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:outfit:outfit-lets-explore%252B2019-addy-short-curly-default.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:hair:hair-short-curly-default-platinum-round-lets-explore%252B2019.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:outfit:outfit-headpiece-lets-explore%252B2019-short-curly-default.png/fl_layer_apply/c_crop,h_600,w_600,x_260,y_130/c_thumb,h_200,w_200/v1/images-mattel/ag-design-studio/prod/dolls/static/body/body-35.png?_a=ATAK9AA0">
+    <img data-src="https://res.cloudinary.com/mattel-dtc-cloud/image/upload/l_images-mattel:ag-design-studio:prod:dolls:static:face:face-josephina-35-short-curly-default.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:eyes:eyes-left-grey-josephina-35.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:eyes:eyes-right-grey-josephina-35.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:earrings:earrings-false.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:outfit:outfit-lets-explore%252B2019-josephina-short-curly-default.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:hair:hair-short-curly-default-platinum-default-lets-explore%252B2019.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:outfit:outfit-headpiece-lets-explore%252B2019-short-curly-default.png/fl_layer_apply/c_crop,h_600,w_600,x_260,y_130/c_thumb,h_200,w_200/v1/images-mattel/ag-design-studio/prod/dolls/static/body/body-35.png?_a=ATAK9AA0" data-widths="[180,360,540,720,900,1080,1296,1512,1728,1944,2160,2376,2592,2808,3024]" data-sizes="auto" tabindex="-1" alt="teardrop" sizes="98px" src="https://res.cloudinary.com/mattel-dtc-cloud/image/upload/l_images-mattel:ag-design-studio:prod:dolls:static:face:face-josephina-35-short-curly-default.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:eyes:eyes-left-grey-josephina-35.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:eyes:eyes-right-grey-josephina-35.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:earrings:earrings-false.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:outfit:outfit-lets-explore%252B2019-josephina-short-curly-default.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:hair:hair-short-curly-default-platinum-default-lets-explore%252B2019.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:outfit:outfit-headpiece-lets-explore%252B2019-short-curly-default.png/fl_layer_apply/c_crop,h_600,w_600,x_260,y_130/c_thumb,h_200,w_200/v1/images-mattel/ag-design-studio/prod/dolls/static/body/body-35.png?_a=ATAK9AA0">
+    <img data-src="https://res.cloudinary.com/mattel-dtc-cloud/image/upload/l_images-mattel:ag-design-studio:prod:dolls:static:face:face-jess-35-short-curly-default.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:eyes:eyes-left-grey-jess-35.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:eyes:eyes-right-grey-jess-35.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:earrings:earrings-false.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:outfit:outfit-lets-explore%252B2019-jess-short-curly-default.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:hair:hair-short-curly-default-platinum-default-lets-explore%252B2019.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:outfit:outfit-headpiece-lets-explore%252B2019-short-curly-default.png/fl_layer_apply/c_crop,h_600,w_600,x_260,y_130/c_thumb,h_200,w_200/v1/images-mattel/ag-design-studio/prod/dolls/static/body/body-35.png?_a=ATAK9AA0" data-widths="[180,360,540,720,900,1080,1296,1512,1728,1944,2160,2376,2592,2808,3024]" data-sizes="auto" tabindex="-1" alt="heart" sizes="98px" src="https://res.cloudinary.com/mattel-dtc-cloud/image/upload/l_images-mattel:ag-design-studio:prod:dolls:static:face:face-jess-35-short-curly-default.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:eyes:eyes-left-grey-jess-35.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:eyes:eyes-right-grey-jess-35.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:earrings:earrings-false.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:outfit:outfit-lets-explore%252B2019-jess-short-curly-default.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:hair:hair-short-curly-default-platinum-default-lets-explore%252B2019.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:outfit:outfit-headpiece-lets-explore%252B2019-short-curly-default.png/fl_layer_apply/c_crop,h_600,w_600,x_260,y_130/c_thumb,h_200,w_200/v1/images-mattel/ag-design-studio/prod/dolls/static/body/body-35.png?_a=ATAK9AA0">
+    <img data-src="https://res.cloudinary.com/mattel-dtc-cloud/image/upload/l_images-mattel:ag-design-studio:prod:dolls:static:face:face-sonali-35-short-curly-default.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:eyes:eyes-left-grey-sonali-35.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:eyes:eyes-right-grey-sonali-35.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:earrings:earrings-false.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:outfit:outfit-lets-explore%252B2019-sonali-short-curly-default.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:hair:hair-short-curly-default-platinum-round-lets-explore%252B2019.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:outfit:outfit-headpiece-lets-explore%252B2019-short-curly-default.png/fl_layer_apply/c_crop,h_600,w_600,x_260,y_130/c_thumb,h_200,w_200/v1/images-mattel/ag-design-studio/prod/dolls/static/body/body-35.png?_a=ATAK9AA0" data-widths="[180,360,540,720,900,1080,1296,1512,1728,1944,2160,2376,2592,2808,3024]" data-sizes="auto" tabindex="-1" alt="oval" sizes="98px" src="https://res.cloudinary.com/mattel-dtc-cloud/image/upload/l_images-mattel:ag-design-studio:prod:dolls:static:face:face-sonali-35-short-curly-default.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:eyes:eyes-left-grey-sonali-35.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:eyes:eyes-right-grey-sonali-35.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:earrings:earrings-false.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:outfit:outfit-lets-explore%252B2019-sonali-short-curly-default.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:hair:hair-short-curly-default-platinum-round-lets-explore%252B2019.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:outfit:outfit-headpiece-lets-explore%252B2019-short-curly-default.png/fl_layer_apply/c_crop,h_600,w_600,x_260,y_130/c_thumb,h_200,w_200/v1/images-mattel/ag-design-studio/prod/dolls/static/body/body-35.png?_a=ATAK9AA0">
+    <img data-src="https://res.cloudinary.com/mattel-dtc-cloud/image/upload/l_images-mattel:ag-design-studio:prod:dolls:static:face:face-classic-35-short-curly-default.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:eyes:eyes-left-grey-classic-35.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:eyes:eyes-right-grey-classic-35.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:earrings:earrings-false.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:outfit:outfit-lets-explore%252B2019-classic-short-curly-default.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:hair:hair-short-curly-default-platinum-default-lets-explore%252B2019.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:outfit:outfit-headpiece-lets-explore%252B2019-short-curly-default.png/fl_layer_apply/c_crop,h_600,w_600,x_260,y_130/c_thumb,h_200,w_200/v1/images-mattel/ag-design-studio/prod/dolls/static/body/body-35.png?_a=ATAK9AA0" data-widths="[180,360,540,720,900,1080,1296,1512,1728,1944,2160,2376,2592,2808,3024]" data-sizes="auto" tabindex="-1" alt="Square" sizes="98px" src="https://res.cloudinary.com/mattel-dtc-cloud/image/upload/l_images-mattel:ag-design-studio:prod:dolls:static:face:face-classic-35-short-curly-default.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:eyes:eyes-left-grey-classic-35.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:eyes:eyes-right-grey-classic-35.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:earrings:earrings-false.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:outfit:outfit-lets-explore%252B2019-classic-short-curly-default.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:hair:hair-short-curly-default-platinum-default-lets-explore%252B2019.png/fl_layer_apply/l_images-mattel:ag-design-studio:prod:dolls:static:outfit:outfit-headpiece-lets-explore%252B2019-short-curly-default.png/fl_layer_apply/c_crop,h_600,w_600,x_260,y_130/c_thumb,h_200,w_200/v1/images-mattel/ag-design-studio/prod/dolls/static/body/body-35.png?_a=ATAK9AA0">
+    <script src="index.js"></script>
+</body>
+</html>
